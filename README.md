@@ -1,7 +1,5 @@
 # IBM-cloud-essentials-V3
 
-[__Free Cloud Service__: IBM Cloud Object Storage](https://cocl.us/objectstorage_cc_cc0101en)
-
 ## Course Syllabus
 - Module 1: [Introduction to IBM Cloud](./1_Introduction_to_IBM_Cloud.md)
 - Module 2: [Infrastructure (Compute, Networking, and Storage)](./2_Infrastructure.md)
