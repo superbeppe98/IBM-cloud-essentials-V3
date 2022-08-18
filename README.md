@@ -24,4 +24,3 @@
 <br>
 
 ## Badge & Certificate
-<p><img src="https://user-images.githubusercontent.com/60066472/85192741-9b96a580-b2fe-11ea-90d6-45d4ae893e17.PNG" width="500"></p>
