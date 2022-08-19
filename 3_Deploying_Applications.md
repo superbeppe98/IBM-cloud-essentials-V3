@@ -247,107 +247,72 @@
 <br>
 
 ## Cloud Foundry
-Welcome to our video about Cloud Foundry and IBM Cloud.
-In this video, we're going to start off by explaining what Cloud Foundry is and how it
-is then used on IBM Cloud.
-We're going to talk about some of the more advanced configuration options.
-And the various runtimes that are supported out of the box.
-We're going to wrap up this video by demonstrating how you can use Cloud Foundry to deploy a
-sample application.
-Thanks and let's begin.
-Cloud Foundry is an example of a Platform as a Service offering or PaaS.
-With Paas offerings, such as Cloud Foundry, you don't have to worry about the underlying
-infrastructure.
-Like runtimes, operating systems or servers.
-It enables you to focus exclusively on your application, code and data.
-Another major benefit of using the PaaS model is that deploying applications and services
-is typically a matter of minutes, not hours or days.
-So, what is Cloud Foundry?
-First off, it's open source.
-Cloud Foundry is an open source project that had its initial release in 2011.
-In 2015, the project was transferred to the newly created Cloud Foundry Foundation.
-The source code for Cloud Foundry is under an Apache license.
-Deployment automation.
-Cloud Foundry has a container-based architecture that runs apps in any programming language.
-You can deploy apps to Cloud Foundry using existing tools with zero modification to the
-code.
-Flexible infrastructure.
-By decoupling applications from infrastructure, you can make individual decisions about where
-to host workloads on premise, in public clouds or in managed infrastructure.
-Commercial options.
-Cloud Foundry is container-based architecture runs apps in the most popular programming
-languages.
-An on the choice of your cloud infrastructure.
-IBM Cloud, AWS, Azure, GCP and more.
-Lastly, we have community support.
-A broad community contributes to and supports Cloud Foundry.
-Over 3,500 contributors 12,000 Slack participants and 850 meetups worldwide.
-Currently, when you deploy with Cloud Foundry on IBM Cloud, you'll get a fully managed multi-tenant
-environment.
-There are three ways to deploy your Cloud Foundry application on IBM Cloud.
-The first is to add a toolchain that includes the IBM Cloud continuous delivery service
-to your application.
-Alternatively, you can deploy from the application level console.
-You can view logs, setup environment variables, raise and lower the instances memory, and
-even scale your application by creating multiple instances.
-Lastly, you'll be able to bind to other IBM services automatically.
-Runtimes link IBM Cloud services to applications as endpoints, giving any instance of an application
-embedded knowledge of how to manage relevant calls and data.
-There are many benefits to using Cloud Foundry on IBM Cloud.
-These include access control.
-You can set up fine grain assignment of compute capacity to development teams with IBM Cloud
-IAM policies.
-Health management.
-Applications that are crashing will automatically try to restart.
-Automatic routing.
-Publicly reachable URLs are automatically created for your applications.
-It's also Lite tier compatible.
-No credit card required.
-The Lite tier limit has a memory of 256 megabytes of application runtime.
-This is good enough for most weekend projects.
-There are many Cloud Foundry runtimes that are supported on IBM Cloud.
-This includes Java, node.js, Python, Go, Swift, PHP.net, Tomcat ,and Ruby.
-Up next, we have a quick demonstration of how to deploy a sample application.
-On Cloud Foundry on IBM Cloud.
-To get started with Cloud Foundry, we're going to go to the Cloud Foundry overview page.
-You can see we have no applications or services running.
-I've pulled down some code here.
-It's our hello world application that we've been using in previous exercises.
-You can see a file manifest.YAML that is specific to Cloud Foundry.
-Let's open it up.
-See, here we have the name, the build pack, and memory and instances.
-Now to get started, we're going to log into IBM Cloud.
-Copy and paste that log in command alright.
-I'm gonna pick the region closest to us.
-And one small change, we're going to make to the path is we're going to append our name,
-our username, to the application name.
-This will make it unique on IBM Cloud.
-We're gonna run the CF push command.
-You can see our application is already registered on the console.
-It's still building, and we have some output there.
-We can see.
-Alright.
-Click on the application.
-Gonna go full screen here.
-Alright, we can see our memory is defaulted to 256 megabytes.
-We can increase that if we like.
-We can increase the number of instances.
-You can see the logs available here and clicking on the open URL.
-There we see our hello world message.
-We can edit the name.
-Increase the number of instances.
-And we can also stop our application.
-To delete it, simply go to the action menu and click delete.
-Remember to delete the route also.
-And there's a very basic example of deploying an application on Cloud Foundry.
-Let's summarize what we've learned.
-Cloud Foundry is a PaaS.
-Implementation enables you to focus on your code rather than the underlying infrastructure.
-Secondly, it's open source.
-It's governed by the Cloud Foundry Foundation and Apache 2 licensed.
-And third Cloud Foundry and IBM Cloud is lite plan compatible and has built in benefits
-like auto scaling, auto routing, and health management.
 
+- Cloud Foundry is an example of a Platform as a Service offering or PaaS
+    - With Paas offerings, such as Cloud Foundry, you don't have to worry about the underlying infrastructure like runtimes, operating systems or servers
+    - It enables you to focus exclusively on your application, code and data
+    - Another major benefit of using the PaaS model is that deploying applications and services is typically a matter of minutes, not hours or days
+
+- So, what is Cloud Foundry?
+    - First off, it's open source
+    - Cloud Foundry is an open source project that had its initial release in 2011
+    - In 2015, the project was transferred to the newly created Cloud Foundry Foundation
+    - The source code for Cloud Foundry is under an Apache license
+
+- Deployment automation
+    - Cloud Foundry has a container-based architecture that runs apps in any programming language
+    - You can deploy apps to Cloud Foundry using existing tools with zero modification to the code
+- Flexible infrastructure
+    - By decoupling applications from infrastructure, you can make individual decisions about where to host workloads on premise, in public clouds or in managed infrastructure
+- Commercial options
+    - Cloud Foundry is container-based architecture runs apps in the most popular programminglanguages
+    - An on the choice of your cloud infrastructure IBM Cloud, AWS, Azure, GCP and more
+- Lastly, we have community support
+A broad community contributes to and supports Cloud Foundry
+Over 3,500 contributors 12,000 Slack participants and 850 meetups worldwide
+Currently, when you deploy with Cloud Foundry on IBM Cloud, you'll get a fully managed multi-tenant environment
+There are three ways to deploy your Cloud Foundry application on IBM Cloud
+The first is to add a toolchain that includes the IBM Cloud continuous delivery service to your application
+Alternatively, you can deploy from the application level console
+You can view logs, setup environment variables, raise and lower the instances memory, and even scale your application by creating multiple instances
+Lastly, you'll be able to bind to other IBM services automatically
+Runtimes link IBM Cloud services to applications as endpoints, giving any instance of an application embedded knowledge of how to manage relevant calls and data
+There are many benefits to using Cloud Foundry on IBM Cloud
+These include access control
+You can set up fine grain assignment of compute capacity to development teams with IBM Cloud IAM policies
+- Health management
+    - Applications that are crashing will automatically try to restart
+- Automatic routing
+    - Publicly reachable URLs are automatically created for your applications
+- It's also Lite tier compatible
+    - No credit card required
+- The Lite tier limit has a memory of 256 megabytes of application runtime
+    - This is good enough for most weekend projects
+    - There are many Cloud Foundry runtimes that are supported on IBM Cloud
+    - This includes Java, node.js, Python, Go, Swift, PHP.net, Tomcat ,and Ruby
+
+- Up next, we have a quick demonstration of how to deploy a sample application on Cloud Foundry on IBM Cloud
+    - To get started with Cloud Foundry, we're going to go to the Cloud Foundry overview page
+    - You can see we have no applications or services running
+    - I've pulled down some code here
+    - It's our hello world application that we've been using in previous exercises
+    - You can see a file manifest.YAML that is specific to Cloud Foundry
+    - See, here we have the name, the build pack, and memory and instances
+    - Now to get started, we're going to log into IBM Cloud
+        - We're gonna run the CF push command
+        - You can see our application is already registered on the console
+        - It's still building, and we have some output there
+        - Alright, we can see our memory is defaulted to 256 megabytes
+         -We can increase that if we like
+        - We can increase the number of instances
+        - You can see the logs available here and clicking on the open URL
+    - There we see our hello world message
+    - We can edit the name
+    - Increase the number of instances
+    - And we can also stop our application
+    - To delete it, simply go to the action menu and click delete
+    - Remember to delete the route also
+    - And there's a very basic example of deploying an application on Cloud Foundry
 <br>
 
 ## Hands-on Lab: Deploy an Application to Cloud Foundry
@@ -356,10 +321,99 @@ like auto scaling, auto routing, and health management.
     - Spin up a free cluster of the Kubernetes service
     - Manage and connect to your cluster using the IBM Cloud CLI
     - Run kubectl commands from the IBM Cloud Shell
-
 <br>
 
 ## Cloud Functions
+What is serverless?
+Serverless computing refers to the concept of building and running applications that
+well, do not require server management.
+It describes a finer grade deployment model where applications bundled as one or more
+functions are uploaded to a platform and then executed, scaled, and built in one response
+to the exact demand needed at the moment.
+With serverless technology, you pay only for code execution.
+This means that you will be able to see considerable cost savings relative to other technologies,like
+VM's or containers which are likely not being used 100% of the time.
+Throughout the course, we've explored several different deployment platforms to run your
+workloads.
+We started with bare metal virtual servers, made our way to containers, and now we're
+at PaaS and Serverless.
+Cloud functions are a Functions as a Service offering that enable developers to build serverless
+applications.
+The developer only has to focus on their application.
+This can further simplify the process of deploying code into production.
+IBM Cloud functions is a Functions as a Service programming platform based on the open source
+project Apache OpenWhisk.
+It has an integrated API gateway.
+An API gateway is a component of cloud functions to expose API's.
+It comes with security, oauth support, rate limiting and custom domain support.
+IBM Cloud functions also supports open API, previously known as swagger.
+Cloud functions have built in integrations with other IBM Cloud services such as AI,
+databases, object storage.
+It also has support for external providers such as GitHub and GitLab.
+IBM Cloud functions offer up to 5 million free executions per month.
+And lastly, there is logging in monitoring through the IBM Cloud Console.
+When talking about cloud functions, we have to talk about actions, triggers, and sequences.
+Actions are the building blocks of your serverless architecture.
+They contain the code performing the work and can be invoked via a rest API or trigger.
+Triggers receive events from outside IBM Cloud functions and invoke all connected actions.
+A webhook for a GitHub repository would be an example of a trigger.
+Sequences invoke multiple actions in linear order.
+This makes it possible to pass parameters from one function to the next.
+There are several common use cases in Serverless Architectures, let's go over some of them
+Serverless APIs.
+You can expose application logic by implementing serverless microservices.
+Map your functions to well defined API endpoints that a user can call by making use of the
+API gateway integration.
+ETL workloads.
+Execute code whenever data is updated in a data store.
+This can be data at rest, like in a database or data in motion, such as a message queue
+or streaming data.
+The last one is alarm driven.
+You can execute your functions periodically.
+Think like a batch job or a Cron job.
+Periodic intervals so that they can run every few hours or at a specific time or date, either
+one time or repeatedly.
+Cloud functions on IBM Cloud support many different runtimes.
+You have the option of choosing from Java, Node, Python, Go, Swift, PHP, Ruby or any
+other language or framework by leveraging containers.
+Up next, we have a quick demonstration of using the cloud functions feature on IBM Cloud.
+To start playing around with our cloud functions.
+We're going to go to the cloud functions overview page.
+And click on the start creating button.
+You can see here we can create an action trigger or sequence to speed things up.
+We're going to use a quick start template.
+There are templates for a hello world application cloud and events, event streams, periodic
+Slack reminder.
+We're going to go ahead and use the get HTTP resource template.
+You can see here that you can choose the different programming language that you'd like to use,
+like Node or Python And it's going to give you a templated code.
+Clicking create will create the action in your namespace.
+Here, you can see the code.
+You can edit the code and run it locally with the invoke button.
+There you go.
+Our location has been returned.
+It says awesome.
+That's exactly what we want.
+Clicking on the parameters, you can set environment variables like API keys.
+You can also view details about your runtime, like what programming language you're using
+and what your time and memory limit are.
+The endpoints is interesting over here, 'cause now you have a publicly accessible URL you
+can use.
+Clicking on that will actually run the application.
+You can see it's actually returning the location as awesome.
+That's exactly what we expect it to return.
+Going back to our code, let's change it up a little bit.
+Let's change the location from Austin to Toronto.
+Save that change.
+Refresh the page and there we go.
+We have Toronto.
+This has been a basic example of a serverless action.
+Let's summarize what we've learned.
+Serverless allows you to spend as much time as possible developing code.
+Cloud functions on IBM Cloud are built on the open source project Openwhisk.
+Cloud functions and IBM Cloud allow you to pay for only the time your code is executed.
+Comes with many other benefits, like 5 million for executions.
+Tight integration with other providers and an integrated API gateway.
 
 <br>
 
