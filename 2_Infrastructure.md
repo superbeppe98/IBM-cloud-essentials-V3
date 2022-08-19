@@ -233,75 +233,121 @@
 <br>
 
 ## Virtual Private Cloud
-What is a virtual private cloud?
-A virtual private cloud is a secure, isolated private cloud hosted within a public cloud.
-It gives you the security of a private cloud with the cost effectiveness and scalability
-of a public cloud.
-It offers an on-demand configurable pool of shared resources allocated within a public
-cloud environment.
-There is isolation between users achieved through private IP subnets and encrypted communication
-channels.
-In a virtual private cloud, there is a function which authenticates users and provides remote
-access to the shared resources.
-This is essentially allowing organizations to work on a virtually private cloud, hence
-the name.
-Virtual private clouds provide the necessary infrastructure in isolation as a fully automated
-solution.
-Let's explore how VPC's provide customizable networking, security, and private access to
-data and storage.
-VPC's allow you to create multiple virtual private clouds in multi zone regions,
-create subnets in different zones, each region has multiple zones.
-Security groups which are created to filter each network interface by a virtual server
-based on IP address.
-You can create virtual server instances quickly using predefined profiles optimized for your
-specific workloads.
-You can use a public gateway to enable communication to the Internet for all virtual server instances
-on the attached subnet.
-You can also add block storage to your virtual private cloud instance by default, a 100 Gigabyte
-General purpose block storage volume is created automatically.
-Let's take a look at a sample architecture for an IBM virtual private cloud.
-First, when the user connects to the Internet and goes to a specific URL, they will need
-to authenticate to the network.
-This is the first blue box around our architecture.
-This will give them a certain predefined access to the network.
-We can see that the VPC Network which is deployed in a specific zone within a region where there
-are storage, virtual server instances, gateways and load balancers are also hosted
-The VPC network has access to many cloud services such as AI, databases, IoT and Container Registry.
-The network also has access to DevOps services
-including monitoring, log analysis, and continuous delivery.
-It's worth noting that right now there are two generation VPC options on IBM cloud.
-Generation one, generation two.
-With generation one, it is available in all six regions you have up to 16 gigabytes per
-second networking. With generation two
-it's available in five regions and you can get networking speeds of up to 80 gigabytes
-per second.
-Currently there is only support for provider managed security .
-Up next, we have a short demonstration to show you some highlighted features of VPC
-on IBM cloud.
-The first thing we're going to do in this video is to create a new virtual private cloud.
-We'll start by giving it a name, selecting the resource group.
-In this case the default one.
-To go along with the VPC, we're going to create a new subnet.
-We're going to go ahead and create it in the Dallas data center, and we're going to give
-it a few virtual IPs.
-And we will lastly enable a public gateway.
-From our subnet view, we can see that we have no resource is attached to it, so let's go
-ahead and create a new instance or a new virtual machine.
-From this view we're presented with our usual options when creating a new virtual machine
-such as name, location, which is tied to where our VPC is located, and a host image.
-You can also select between different profiles to give you more or less memory and CPU power.
-Much like classic virtual machines, you can add an SSH key.
-Let's go ahead and do that quickly.
-We're going to go ahead and keep the rest of the options as default.
-And create our virtual machine.
-And just like that you can create a virtual machine on a VPC.
-Let's summarize what we've learned.
-A virtual private cloud is a secure, isolated private cloud within a public cloud.
-The IBM cloud virtual private cloud service is very customizable in terms of networking,
-security, compute, and storage aspects.
-Lastly, there is a generation one and generation two virtual private cloud.
-Generation one offers more options for regions and security, but generation two has higher
-networking speeds and provisioning times.
+- What is a virtual private cloud?
+    - A virtual private cloud is a secure, isolated private cloud hosted within a public cloud
+    - It gives you the security of a private cloud with the cost effectiveness and scalability of a public cloud
+    - It offers an on-demand configurable pool of shared resources allocated within a public cloud environment
+    - There is isolation between users achieved through private IP subnets and encrypted communication channels
+    - In a virtual private cloud, there is a function which authenticates users and provides remote access to the shared resources
+    - Virtual private clouds provide the necessary infrastructure in isolation as a fully automated solution
+
+- VPC's allow you to create multiple virtual private clouds in multi zone regions, create subnets in different zones, each region has multiple zones
+    - Security groups which are created to filter each network interface by a virtual server based on IP address
+    - You can create virtual server instances quickly using predefined profiles optimized for your specific workload
+    - You can use a public gateway to enable communication to the Internet for all virtual server instances on the attached subnet
+    - You can also add block storage to your virtual private cloud instance by default, a 100 Gigabyte General purpose block storage volume is created automatically
+
+- Let's take a look at a sample architecture for an IBM virtual private cloud
+    - First, when the user connects to the Internet and goes to a specific URL, they will need to authenticate to the network.
+    - This is the first blue box around our architecture; this will give them a certain predefined access to the network
+    - We can see that the VPC Network which is deployed in a specific zone within a region where there are storage, virtual server instances, gateways and load balancers are also hosted
+    - The VPC network has access to many cloud services such as AI, databases, IoT and Container Registry 
+    - The network also has access to DevOps services including monitoring, log analysis, and continuous delivery
+
+- It's worth noting that right now there are two generation VPC options on IBM cloud.
+    - With generation one, it is available in all six regions you have up to 16 gigabytes per second networking
+    - With generation two, it's available in five regions and you can get networking speeds of up to 80 gigabytes per second
+    - Currently there is only support for provider managed security
+
+- Up next, we have a short demonstration to show you some highlighted features of VPC on IBM cloud
+    - The first thing we're going to do in this video is to create a new virtual private cloud 
+    - We'll start by giving it a name, selecting the resource group
+    - To go along with the VPC, we're going to create a new subnet
+    - We're going to go ahead and create it in the Dallas data center, and we're going to give it a few virtual IPs
+    - And we will lastly enable a public gateway
+    - Create the virtual machine and assign the VPC
+    - And just like that you can create a virtual machine on a VPC
+<br>
+
+## Vmware
+- So why use VMware on cloud?
+    - Well, in the early 2000s, before we really had any major public clouds, VMware Solutions became the standard for desktop and server virtualization
+    - Many companies were using VMware to virtualize their workloads
+    - VMware software was deployed to servers and data centers all over the world
+    - In fact, many IBM clients were using VMware or still using VMware to this day
+    - In 2016, IBM Cloud became the first cloud vendor to bring VMware services to the cloud
+
+- Why migrate workloads?
+    - The 1st and biggest reason is to bring cloud economies to VMware workloads
+    - You can expect far less spending on capital expenditures
+    - This includes things like purchasing equipment, data centers, so forth
+    - By using a cloud provider, you ensure your workloads can take advantage of the underlying highly available networking between regions of a cloud
+
+- IBM Cloud offers two VMware based services
+    - The first is VMware solutions dedicated
+        - This is a single tenant bare metal solution that has options for vCenter Server and VMware vSphere
+        - This service allows you to retain root level access to the hypervisor, giving you a similar experience as you would have on premises in a data center
+    - The second is VMware Solutions shared
+        - This is a multi-tenant solution that uses shared infrastructure and provides a VMware environment based on Vcloud director
+        - The VM ware solutions dedicated service is a bare metal solution with vCenter and vSphere options
+        - With the dedicated solution, the customer still has root access down to the hypervisor level
+        - The V center option is a fully automated, standardized software defined data center
+        - Networking, storage and add ONS can be automatically configured at install time
+        - The vSphere option allows for more customization for networking, storage and add ons
+
+- Both solutions provide the option to purchase IBM provided licenses or to bring your own license
+- You can also deploy add on services to a new or existing instance
+- This includes security and compliance services like big IP and business continuity and migration services like Veeam and Zerto
+
+- On the other hand, we have VMware Solutions shared
+    - This allows you to deploy workloads on top of IBM hosted VMware infrastructure
+    - IBM provides a self-service on-demand VMware cloud computing platform with VMware vCloud Director running on IBM Cloud
+    - With the shared solution IBM manages up to the hypervisor level
+    - It's very cost effective
+    - You only pay for what you use, and you can start small as small as one V CPU and 1 Gigabyte of ram and expand when you're ready
+    - The shared option is perfect for temporary migration and burst scenarios
+    - Linked into this is disaster recovery
+    - Veeam services enable an economical landing zone for disaster recovery workloads
+    - Lastly, self-service, the shared service interface was designed to get you productive from day one
+    - You can get up and running within minutes
+
+- So why use VMware on IBM Cloud?
+    - IBM Cloud has several unique advantages
+    - The first is security, which is provided via encryption and access control
+    - IBM provides the highest level of encryption for data at rest and data in motion with FIPS 142 Level 4 based encryption
+
+- Next is compliance
+    - We can comply with data sovereignty regulations and sharing
+    - We provide geofencing for your workloads
+
+- Expertise
+    - IBM is one of the world's largest operators of VM Ware workloads
+    - With over 15 years of experience, we've managed over 850,000 workloads and have migrated over 100,000 workloads from on Prem to the cloud
+    - This is across many different industry verticals, from government to banking to retail
+
+- The last one I'll mention is rapid setup
+    - IBM Cloud's automation can quickly get your VM Ware deployment up and running in hours, not days or weeks
+    - At the time of this video, there are 13 optional services you can add to your VM Ware deployment
+    - These range from security and compliance to business continuity and migration type services
+
+- I've picked three to talk about at a high level
+    - First, we're going to talk about Veeam; it allows you to backup and replicate virtual machines on VM Ware easily
+    - Next is Zerto, which assists with creating and managing disaster recovery with VMware
+    - And lastly, we have the F5 Big IP Suite of products: these help in networking and security related tools for your VMware solution; it covers things like load balancing, firewalls, DNS and more
+
+- Up next, we have a quick demonstration of how to configure a VMware solution on IBM Cloud
+    - We can see our options for a shared and dedicated offering
+    - There's also a list of the different services and integration points that are offered on VMware cloud solutions
+    - These range from professional services to security compliance to business continuity
+    - You can choose between a single zone or multi-zone cluster
+    - View the different type of instance configurations
+    - And here you can choose the different vSphere versions, such as 6.5
+    - You can provide all your licenses upon creation of your cluster or you can purchase them from IBM Cloud
+    - And here you can see the different locations to which you can provision a bare metal server for your VMware solution
+
+    - Let's go and take a look at the shared solution
+    - We have on demand and reserved instances
+    - Recall that these values can be changed on the fly
 <br>
 
 [Go to Next Module](./3_Deploying_Applications.md)
