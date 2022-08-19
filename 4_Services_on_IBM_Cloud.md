@@ -13,101 +13,62 @@
 <br>
 
 ## Databases
-Welcome to module 4.
-My name is Horea Porutiu and I'll be your instructor for this module.
-I'm very excited to talk more about module 4 because it covers some of the most popular
-services in IBM Cloud.
-We'll be covering necessities such as databases and then going into more emerging technologies
-such as blockchain, IoT, and AI.
-In this first video, we're going to talk about databases.
-We're going to cover things such as the SQL database.
-We'll talk about document databases and then key value databases.
-And then we'll end with the database as a service offerings on IBM Cloud.
-Let's get started.
-Before we get into it, let's talk about what exactly is a database.
 A database is an organized collection of data stored on a computer.
-Traditionally, this was done via rows and columns as commonly seen in the relational
-or SQL database.
-Now, databases have evolved into storing information in ways that do not depend on SQL which are
-commonly referred to as NoSQL.
-Databases are used for a variety of use cases, ranging from storing personal or employee
-information, transaction history or customer data.
+Traditionally, this was done via rows and columns as commonly seen in the relational or SQL database.
+Now, databases have evolved into storing information in ways that do not depend on SQL which are commonly referred to as NoSQL.
+Databases are used for a variety of use cases, ranging from storing personal or employee information, transaction history or customer data.
 You'll see them in just about any application you're using.
-There are many types of databases, so we'll cover three types as they relate to services
-available on IBM Cloud.
+There are many types of databases, so we'll cover three types as they relate to services available on IBM Cloud.
 First, we have a relational database, which is an example of a SQL database.
-A relational database is a collection of data organized into a table structure, organized
-into rows and columns.
-Structured query language, SQL is typically the standard programming language used to
-update and query the database.
-Relational databases are also great for asset compliance and high transaction applications
-such as online transaction processing.
+A relational database is a collection of data organized into a table structure, organized into rows and columns.
+Structured query language, SQL is typically the standard programming language used to update and query the database.
+Relational databases are also great for asset compliance and high transaction applications such as online transaction processing.
 Next, we have document databases.
 There an example of a non-SQL database document.
 Databases have flexible schemas.
 They're best suited to store semi structured data and it can handle dynamic querying.
-Some common use cases for document stores include customer data, user generated content,
-and order data.
+Some common use cases for document stores include customer data, user generated content, and order data.
 Lastly, we have a key value database.
 Another example of a non-SQL database.
-A key value database is a non-relational database that stores data as a collection of key value
-pairs in which a key serves as a unique identifier.
-Common use cases for these types of databases are leaderboards, caches, and shopping cart
-data
-Database as a service is a cloud computing service that lets users access and use a cloud
-database system without purchasing and setting up their own hardware, installing their own
-database software, or managing the database themselves.
-Database as a service or DBaaS offers your organization significant financial, operational
-and strategic benefits.
+A key value database is a non-relational database that stores data as a collection of key value pairs in which a key serves as a unique identifier.
+Common use cases for these types of databases are leaderboards, caches, and shopping cart data
+Database as a service is a cloud computing service that lets users access and use a cloud database system without purchasing and setting up their own hardware, installing their own database software, or managing the database themselves.
+Database as a service or DBaaS offers your organization significant financial, operational and strategic benefits.
 First, we have simpler, less costly management.
 With database as a service,the cloud provider manages everything.
 Although you can choose to manage certain aspects yourself if you wish.
-Scalability, you can quickly and easily provision additional storage and computing capacity
-at runtime if you need it, and you can scale down your database cluster during non-peak
-usage times to save cost.
+Scalability, you can quickly and easily provision additional storage and computing capacity at runtime if you need it, and you can scale down your database cluster during non-peak usage times to save cost.
 And you have rapid development and faster time to market.
-With DBaaS, developers can help themselves to database capabilities and spin up and configure
-a database that's ready to integrate with their application in minutes.
+With DBaaS, developers can help themselves to database capabilities and spin up and configure a database that's ready to integrate with their application in minutes.
 IBM Cloud has a few different options in terms of relational databases.
-Db2, a fully hosted, highly performant relational data store running the enterprise class Db2
-database engine.
-We also have Db2 hosted which lets you run Db2 with full administrative access on cloud
-infrastructure.
+Db2, a fully hosted, highly performant relational data store running the enterprise class Db2 database engine.
+We also have Db2 hosted which lets you run Db2 with full administrative access on cloud infrastructure.
 Then we have my SQL, one of the most popular databases.
 It is free an under the GNU General Public License and also Postgres.
 Postgres is an open source object relational database with over 30 years of history.
 Next, let's talk a little bit about document databases on IBM Cloud.
-First, we have MongoDB, which is the most popular document database and is available
-as a managed service on IBM Cloud.
-It features a flexible data model, high availability, automated backup orchestration, auto scaling
-and coupled allocation of storage RAM, and vCPUs and is HIPAA compliant.
+First, we have MongoDB, which is the most popular document database and is available as a managed service on IBM Cloud.
+It features a flexible data model, high availability, automated backup orchestration, auto scaling and coupled allocation of storage RAM, and vCPUs and is HIPAA compliant.
 Next, we have clouded, which is IBM's database as a service based on Apache's CouchDB.
 It has a 99.99% service level agreement.
-Next, we have Elasticsearch which is IBM Cloud's enterprise-ready fully managed solution for
-JSON document indexing and full text search capabilities.
+Next, we have Elasticsearch which is IBM Cloud's enterprise-ready fully managed solution for JSON document indexing and full text search capabilities.
 Next, we'll talk about the key value databases on IBM Cloud.
 We have two options for that.
 First is Reddis, which is an open source in memory data structure store, used as a database,
 cache, and message broker.
-Next, we have etcd, which is an object relational database management system with an emphasis
-on extensibility and on standards compliance.
+Next, we have etcd, which is an object relational database management system with an emphasis on extensibility and on standards compliance.
 Next, we're going to go into a little bit more detail on using the cloudant database.
 So, here, we're in our IBM Cloud and we've already provisioned a cloudant database service,
 and we're here in the manage tab of that service.
-You can see we have a button to launch the dashboard and we have our external endpoint
-here.
+You can see we have a button to launch the dashboard and we have our external endpoint here.
 So later in the video will be making a curl request to that external endpoint.
-Now we've launched their dashboard and we see we've created a database here called demo
-IBM Cloud essentials.
-We can see that the number of docs is three and here, once we click that database, we
-see our documents and currently they are shown in meta data format.
+Now we've launched their dashboard and we see we've created a database here called demo IBM Cloud essentials.
+We can see that the number of docs is three and here, once we click that database, we see our documents and currently they are shown in meta data format.
 But we can change the table format and then we can go back to metadata and go into JSON.
 So you can see these three documents.
-Each document has a name, city, and professional key, and then it has different value associated
-with that.
+Each document has a name, city, and professional key, and then it has different value associated with that.
 The first document has my name and my city.
-The second document has Bob Simon, so it's a different person and it has their city and
-profession, and the next document has Dana Porutiu you.
+The second document has Bob Simon, so it's a different person and it has their city and profession, and the next document has Dana Porutiu you.
 And then it has a different city and a profession.
 So what we're going to be doing later on in the video is making a query to this database.
 So now we're going to go ahead to our terminal and we're going to show you a sample query.
@@ -115,39 +76,27 @@ So, here is a JSON, which uses a selector to make a query.
 So, this is what cloudant enables us to do.
 So, for our selector we're looking for the name field.
 And we're going to, we're looking for Horea Porutiu specifically.
-So, we should be able to return that document which has that key and value pair name where
-Horea Porutiu.
+So, we should be able to return that document which has that key and value pair name where Horea Porutiu.
 So here we're making that curl request.
-You can see we're using curl and then we have that external endpoint that we showed you
-earlier.
+You can see we're using curl and then we have that external endpoint that we showed you earlier.
 And then you can see we're doing /demo-ibmcloudessentials.
-That's the database name that we've created, and we're doing a find, so we're using the
-find operation.
-So we're going to find the documents in that database that match our query so you can see
-here we have authorization token, so I've already created that in previous steps.
-And there's documentation on how to do that, but you will need to use your API key to create
-a token to authorize yourself.
+That's the database name that we've created, and we're doing a find, so we're using the find operation.
+So we're going to find the documents in that database that match our query so you can see here we have authorization token, so I've already created that in previous steps.
+And there's documentation on how to do that, but you will need to use your API key to create a token to authorize yourself.
 And then in the data we're just using my selector.
-So again, here we see that using that selector we have got our document back and we have
-the document ID, the name, the city, and the profession, which we showed you earlier.
+So again, here we see that using that selector we have got our document back and we have the document ID, the name, the city, and the profession, which we showed you earlier.
 So, that was a quick example showing how to use a curl, a cloudant relational database.
-And now let's go ahead and summarize.
-There are many different types of databases out there.
-Relational or SQL databases, document databases, and key value databases.
-Database as a service or DBaaS offerings have lowered the cost of manage database while
-enabling faster integration with existing applications.
-IBM Cloud has many database as a service options from DB2 to cloudantt and from MongoDB to
-Postgres.
 <br>
 
 
 ## Hands-on Lab: Get to Know Cloudant
-
 - Navigate to [link](https://cloud.ibm.com) to launch the IBM Cloud
     - Create a Cloudant database service
     - Create a database in with your Cloudant service
     - Create a document within your database
     - Query your database using the Cloudant Console
+![image](https://user-images.githubusercontent.com/29455975/185653877-14a299d3-6b8a-47d5-9afc-674c0d0e4815.png)
+
 <br>
 
 ## Integration
@@ -415,6 +364,9 @@ such as Python, Go, Android, node.js, Swift, Java, and Salesforce.
     - Create a Watson Discovery service
     - Interact with the Watson Discovery interface
     - Run queries with Watson Discovery
+
+![image](https://user-images.githubusercontent.com/29455975/185654570-19ee602f-ab7e-49d3-b067-77b8350da304.png)
+<br>
 
 ## Analytics
 In this video, we're going to talk about Analytics Services on IBM Cloud.
