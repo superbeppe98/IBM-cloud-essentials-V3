@@ -141,17 +141,227 @@
     - Manage and connect to your cluster using the IBM Cloud CLI
     - Run kubectl commands from the IBM Cloud Shell
 
+![image](https://user-images.githubusercontent.com/29455975/185631162-a837c9d8-5967-452a-ba35-e08e88f6220f.png)
 <br>
 
 
 
-## Hands-on Lab: Using the Catalog and Cloud Shell
+## OpenShift
+
+- OpenShift is based on the open source OKD Project.
+    - OKD is the community distribution of Kubernetes that Powers OpenShift.
+    - OpenShift is a layer that's built on top of Kubernetes
+    - OpenShift makes a lot of the difficult tasks like deploying applications and doing day-to-day administrative operations easier by extending Kubernetes in an opinionated way
+    - OpenShift like Kubernetes is also deployable on premises or in a cloud and with the exception of OKD, OpenShift benefits from enhanced security from being run on RHEL
+
+- Let's compare Kubernetes and OpenShift side-by-side
+    - With Kubernetes you have just the core framework
+    - With OpenShift, you have that same core Kubernetes framework, but all of OpenShift's abstractions
+    - With Kubernetes, the platform or user, is responsible for integrating beyond the core framework
+    - And with OpenShift opinions, an integration of common features are included
+
+- So how does OpenShift extend Kubernetes?
+    - The first is it provides an integrated Container Registry
+    - It has a powerful integrated console that improve the experience for developers and operators
+    - OpenShift takes the Kubernetes namespace concept and extends it with projects, allowing you to control access between who can access namespaces or projects
+    - OpenShift greatly simplifies developer workflow with source to image and routes
+    - Lastly, system administrators can use built-in monitoring tools like Grafana and Prometheus
+    - IBM Cloud offers a highly available, fully managed OpenShift offering
+    - In a matter of minutes, you can spin up your own OpenShift cluster and start deploying applications, allowing developers to focus on creating applications, not managing infrastructure
+
+- Red Hat OpenShift on IBM Cloud has many other benefits
+    - It has automated upgrades and patching
+    - It's secure
+    - Like its Kubernetes counterpart, has broad industry compliance, including HIPAA, PCI, and SOC1, and more
+    - You can configure cluster as a single or multi zone cluster
+    - There's integration with LogDNA insisting and at the time of this recording there are multiple versions available
+
+- The only difference here is that there is no free tier option
+
+- OpenShift 4 brought in many new features
+    - The operator framework
+        - OpenShift 4 was re-architected around operators
+        - Operators enable developers to Automate the management of components like databases in a consistent, repeatable, scalable way
+    - The OpenShift Service Mesh
+        - OpenShift 4 saw the inclusion of OpenShift Service Mesh, which is based on STO
+        - With Red Hat on IBM Cloud, you can install a Service Mesh on your cluster in just a few clicks
+    - OpenShift Serverless Computing
+        - OpenShift 4 saw the inclusion of OpenShift Serverless Computing, which is based on K native
+        - Just like the server mesh component, you can install a Service Mesh on your cluster in just a few clicks
+    - OpenShift pipelines cloud native CI CD pipelines were introduced in OpenShift 4
+        - These are based on detect an open source project and code ready workspaces built on the Eclipse Che Open Source Project
+        - Red Hat Code ready workspaces uses Kubernetes and containers to provide a user with a consistent and secure development environment
+
+- With OpenShift’s rise in popularity, it has become available in many different platforms
+    - IBM based platforms such as IBM Cloud as well as IBM Z and Power
+    - Other major cloud providers such as AWS, Azure, and GCP also provide OpenShift
+    - You can deploy OpenShift to Red Hat OpenStack or virtualization platforms
+    - You can also deploy to VMware vSphere or on another bare metal server
+    - Two things to point out code ready containers will spin up a minimal cluster on a local machine, which is ideal for a dev and test purposes
+    - And the OpenShift playground is available online with no sign up required
+    - It's great for experimenting, but only available for 60 minutes up next
+
+- We're going to have a quick demonstration of spinning up an OpenShift cluster on IBM Cloud
+    - Accessing it and deploying a sample application
+    - Getting started with Red Hat OpenShift on IBM Cloud is similar to getting started with the Kubernetes service on IBM Cloud
+    - Go to the cloud catalog, find the Red Hat OpenShift
+    - Click it and start configuring your cluster
+    - You see, the overview page looks very similar to that of the Kubernetes cluster from the previous lesson
+    - We have our worker nodes, worker pools, and add ons
+    - To truly get started with OpenShift, let's click on that OpenShift Web console link at the top right
+    - Find your username on the top right and click login
+    - Here you can find the OC command used to log into the cluster
+    - Let's pop open a router and deploy the same application that we did in the previous lesson
+        - We start by running the OC new project command
+        - And we're going to create a new project called samples
+        - Refreshing our console, we can see these samples project is now available
+        - Let's run the OC new app command
+        - We're going to point it to the Git repository
+        - And you can see by going to the developer point of view you can see the topology
+        - We've already got one deployment up and running
+        - Let's run the OC exposed command
+    - That'll give us a route
+        - And running the OC get routes command will list all the routes available
+        - Before we click on the open URL button, notice that the build is actually still running
+        - Let's click on that build
+        - You can see here it's actually generating a dockerfile automatically
+        - It's not using the one that is built into the directory
+        - This is leveraging source to image
+        - It's going to automatically detect that node.js is being used and attempt to build an image from your source code
+        - You can see that it's also pushing the image to OpenShift's internal registry
+        - Now that the push is complete, let's click on our deployment
+        - We can click on the pods that are associated with it, click on the logs there
+        - We can see our application is up and running
+        - Now let's click that open URL button
+        - And there's our message
+    - Going back to the topology and clicking the overview tab, we can scale up and create three replicas
+        - There are many other actions you can take from the OpenShift Console
+        - We're going to save that for a different course
+        - From the administrative point of view, you can see the pods that are available
+        - Let's wrap this up by deleting some of the artifacts that we had created
+        - Here's our deployment config
+        - Let's start deleting that
+        - That'll automatically scale down our application and start deleting the pods
+        - And refreshing our page will make it unavailable
+    - To delete the cluster, we go back to the cluster overview page and go to the actions menu
+<br>
+
+## Cloud Foundry
+Welcome to our video about Cloud Foundry and IBM Cloud.
+In this video, we're going to start off by explaining what Cloud Foundry is and how it
+is then used on IBM Cloud.
+We're going to talk about some of the more advanced configuration options.
+And the various runtimes that are supported out of the box.
+We're going to wrap up this video by demonstrating how you can use Cloud Foundry to deploy a
+sample application.
+Thanks and let's begin.
+Cloud Foundry is an example of a Platform as a Service offering or PaaS.
+With Paas offerings, such as Cloud Foundry, you don't have to worry about the underlying
+infrastructure.
+Like runtimes, operating systems or servers.
+It enables you to focus exclusively on your application, code and data.
+Another major benefit of using the PaaS model is that deploying applications and services
+is typically a matter of minutes, not hours or days.
+So, what is Cloud Foundry?
+First off, it's open source.
+Cloud Foundry is an open source project that had its initial release in 2011.
+In 2015, the project was transferred to the newly created Cloud Foundry Foundation.
+The source code for Cloud Foundry is under an Apache license.
+Deployment automation.
+Cloud Foundry has a container-based architecture that runs apps in any programming language.
+You can deploy apps to Cloud Foundry using existing tools with zero modification to the
+code.
+Flexible infrastructure.
+By decoupling applications from infrastructure, you can make individual decisions about where
+to host workloads on premise, in public clouds or in managed infrastructure.
+Commercial options.
+Cloud Foundry is container-based architecture runs apps in the most popular programming
+languages.
+An on the choice of your cloud infrastructure.
+IBM Cloud, AWS, Azure, GCP and more.
+Lastly, we have community support.
+A broad community contributes to and supports Cloud Foundry.
+Over 3,500 contributors 12,000 Slack participants and 850 meetups worldwide.
+Currently, when you deploy with Cloud Foundry on IBM Cloud, you'll get a fully managed multi-tenant
+environment.
+There are three ways to deploy your Cloud Foundry application on IBM Cloud.
+The first is to add a toolchain that includes the IBM Cloud continuous delivery service
+to your application.
+Alternatively, you can deploy from the application level console.
+You can view logs, setup environment variables, raise and lower the instances memory, and
+even scale your application by creating multiple instances.
+Lastly, you'll be able to bind to other IBM services automatically.
+Runtimes link IBM Cloud services to applications as endpoints, giving any instance of an application
+embedded knowledge of how to manage relevant calls and data.
+There are many benefits to using Cloud Foundry on IBM Cloud.
+These include access control.
+You can set up fine grain assignment of compute capacity to development teams with IBM Cloud
+IAM policies.
+Health management.
+Applications that are crashing will automatically try to restart.
+Automatic routing.
+Publicly reachable URLs are automatically created for your applications.
+It's also Lite tier compatible.
+No credit card required.
+The Lite tier limit has a memory of 256 megabytes of application runtime.
+This is good enough for most weekend projects.
+There are many Cloud Foundry runtimes that are supported on IBM Cloud.
+This includes Java, node.js, Python, Go, Swift, PHP.net, Tomcat ,and Ruby.
+Up next, we have a quick demonstration of how to deploy a sample application.
+On Cloud Foundry on IBM Cloud.
+To get started with Cloud Foundry, we're going to go to the Cloud Foundry overview page.
+You can see we have no applications or services running.
+I've pulled down some code here.
+It's our hello world application that we've been using in previous exercises.
+You can see a file manifest.YAML that is specific to Cloud Foundry.
+Let's open it up.
+See, here we have the name, the build pack, and memory and instances.
+Now to get started, we're going to log into IBM Cloud.
+Copy and paste that log in command alright.
+I'm gonna pick the region closest to us.
+And one small change, we're going to make to the path is we're going to append our name,
+our username, to the application name.
+This will make it unique on IBM Cloud.
+We're gonna run the CF push command.
+You can see our application is already registered on the console.
+It's still building, and we have some output there.
+We can see.
+Alright.
+Click on the application.
+Gonna go full screen here.
+Alright, we can see our memory is defaulted to 256 megabytes.
+We can increase that if we like.
+We can increase the number of instances.
+You can see the logs available here and clicking on the open URL.
+There we see our hello world message.
+We can edit the name.
+Increase the number of instances.
+And we can also stop our application.
+To delete it, simply go to the action menu and click delete.
+Remember to delete the route also.
+And there's a very basic example of deploying an application on Cloud Foundry.
+Let's summarize what we've learned.
+Cloud Foundry is a PaaS.
+Implementation enables you to focus on your code rather than the underlying infrastructure.
+Secondly, it's open source.
+It's governed by the Cloud Foundry Foundation and Apache 2 licensed.
+And third Cloud Foundry and IBM Cloud is lite plan compatible and has built in benefits
+like auto scaling, auto routing, and health management.
+
+<br>
+
+## Hands-on Lab: Deploy an Application to Cloud Foundry
 
 - Navigate to [link](https://cloud.ibm.com) to launch the IBM Cloud
-    - Create a Cloudant database
-    - Launch the IBM Cloud Shell
-    - Use the IBM Cloud CLI
+    - Spin up a free cluster of the Kubernetes service
+    - Manage and connect to your cluster using the IBM Cloud CLI
+    - Run kubectl commands from the IBM Cloud Shell
 
 <br>
+
+## Cloud Functions
+
+<br>
+
 
 [Go to Next Module](./4_Services_on_IBM_Cloud.md)
