@@ -128,22 +128,180 @@
     - And show that it is in fact mounted on /NFS/extra.
 <br>
 
-## Hands-on Lab: Using the Catalog and Cloud Shell
+## Object Storage
+- Object storage is great for storing vast amounts of unstructured data
+    - Files are uploaded as objects and saved into buckets
+    - Within a bucket, there is no directory or tree structure
+    - When an object is placed in a bucket, it is given a unique identifier
+    - It has some metadata, like when the data was uploaded or last accessed
 
-- Navigate to [link](https://cloud.ibm.com) to launch the IBM Cloud
-    - Create a Cloudant database
-    - Launch the IBM Cloud Shell
-    - Use the IBM Cloud CLI
+- Benefits
+    - Access management control: you can set policies on who can access and modify objects via IBM Clouds IAM settings
+    - Encryption: all objects stored in IBM Cloud object storage and are encrypted by default; additionally, you can encrypt the data using your own keys with IBM key protect
+    - SQL query support: you can run SQL queries against objects stored in buckets
+    - High speed transfer: you can leverage esparra to upload data quickly
+    - SDK's and API's: objects can be accessed via an S3 compatible rest API or with an SDK that is written for many popular programming languages
 
+- IBM Cloud's object storage service offers different levels of resiliency
+    - The cross region option for your instance means that your data is stored across three regions within a geography: this will offer you the highest possible availability, but at the lowest performance level
+    - The regional choice is a great blend of availability, performance, and service integration: less available than cross region but is higher performance and when more integration with other services; the single data centers choice is 1; your data is stored across multiple devices in a single data center; this is recommended when keeping your data in country is a top priority.
+
+- There are four different tiers of storage class for IBM Cloud object storage
+    - Smart tier: it will automatically give you the lowest storage rate based on your monthly activity
+    - The standard storage class: is great when your data needs to be accessed frequently; it is a higher cost per GB, but as higher performance
+    - The vault storage class is ideal for data which needs to be accessed once a month or less
+    - This is cheaper than the standard storage class, but a bit more expensive than the coldvault option
+    - The cold vault option is usually used for archives where data is only accessed a few times per year
+
+- Up next, we have a quick demonstration about how to use the IBM Cloud object storage service
+    - Now we've already spun up a cloud object storage service
+    - We're going to go ahead and click the create a bucket option
+    - We're just going to go ahead and click the quick start option
+    - It'll automatically set up a smart tier storage class bucket
+    -We can go ahead and change the bucket name if you'd like and optionally upload a few files
+    - Alright, we can see our objects have been uploaded successfully
+    - From here, let's go ahead and change the access policy for this bucket
+    - Click on the public access tab and choose to enable public access
+    - You can see now that the public access setting in the bucket level view has been enabled; you can see a URL that you can use
+    - We now verify that our objects are publicly accessible
 <br>
 
-## Hands-on Lab: Using the Catalog and Cloud Shell
+## Hands-on Lab: Get to Know Cloud Object Storage
 
 - Navigate to [link](https://cloud.ibm.com) to launch the IBM Cloud
-    - Create a Cloudant database
-    - Launch the IBM Cloud Shell
-    - Use the IBM Cloud CLI
+    - Create the service
+    - Create a bucket
+    - Download from the bucket
+![2022-08-18 20 51 44 cloud ibm com 745023d27698](https://user-images.githubusercontent.com/29455975/185472076-98976a20-a7da-4f14-98b0-34c53c9aa61b.jpg)
+<br>
 
+## Network Services
+- IBM Cloud has two different services for networking
+    - The first is called Cloud Internet services; this service is based on Cloudflare
+    - The second is a collection of networking infrastructure services with options for Vlans, VPNs, and CDN's
+
+- The cloud Internet services provide reliable, secure options for Internet facing applications by leveraging Cloudflare
+    - Cloudflare, if you're not familiar, is a web infrastructure company that provides DNS services to 12 million websites and has over 165 points of presence all over the world
+
+- Within IBM Cloud you can use cloud Internet services to configure the following:
+    - Domain name server for host name resolution
+    - Transport layer security to secure data
+    - Global load balancer to reduce latency and increase availability by routing traffic based on server availability and health
+    - Rate limiting, which automatically identifies and mitigates excessive request rates
+    - DDoS protection, a scalable configurable service that protects against brute force attacks
+    - Smart routing, which ensures content is delivered on the fastest path from end user to application
+    - Web application firewall, a layered defense to protect data against sophisticated attackers and malicious bots and caching, which reduces latency and improves performance
+
+- There are many networking related services on IBM Cloud
+    - The Gateway appliance enables you to create virtual routers, firewalls and private networking devices
+        - You can choose between a Juniper or AT&T based appliance
+        - There are both hardware and software-based firewalls
+        - These will prevent malicious activity, helping to ensure uptime of your server
+        - You can add a firewall to a specific virtual server
+    - Next are VPNs
+        - VPNs facilitate connectivity from your network to IBM's private network
+        - Subnets and IPS subnets provide additional IP addresses for virtual machines
+        - There are managed independently of virtual machine resources and are available until cancelled
+    - Lastly, we have virtual local area networks or VlANs
+        - AV line is used to provide packet identification and to let multiple workloads coexist on the same physical equipment
+        - Depending on your situation, you may never need to interact with VLANss directly because they are managed automatically
+
+- Let's talk about the direct link service
+    - Direct link creates a direct private connection between remote networks and IBM Cloud
+    - With direct link you have a secure dedicated connectivity
+    - It gives you private access to IBM Cloud infrastructure
+    - It offers a fully integrated hybrid environment
+    - Whether your resources are in a data center or on IBM Cloud, direct link is perfect for creating multi cloud connectivity in a single environment
+    -  And lastly we have speed
+        - With direct link you can choose between speeds of 5100, 500 megabits per second or even up to five gigabits per second as your needs change
+        You can transition your speed seamlessly
+
+    - IBM Cloud also provides a CDN service
+    - A CDN is a highly distributed platform of servers to help minimize delays
+        - First off, it's based off Akamai, a best of breed CDN provider to create one of the world's fastest and most reliable content delivery networks
+        - Second, smarter scaling automatically scale your service globally to over 2200 points of presence in 36 countries
+        - Using a CDN also makes things more secure as now you have a new layer between yourself and infrastructure attacks
+        - You can use it to optimize dynamic content
+        - You can direct customer requests
+        - Through optimized routes, proactively fetching content from origin and large file compression
+    - Lastly, there is usage-based pricing
+        - Pay for what you use with no minimum monthly fee
+        - The last service we'll talk about is the load balancer, which is used to distribute traffic among to your virtual servers
+        - You can choose between an IBM Cloud load balancer or a Citrix Netscaler VPX load balancer
+        - Elastic load balancers allow for layer four and layer seven load balancing
+        - This includes HTTP, HTTPS, NTCP, Public and private load balancing, server health checks, SSL offload, and monitoring metrics
+<br>
+
+## Virtual Private Cloud
+What is a virtual private cloud?
+A virtual private cloud is a secure, isolated private cloud hosted within a public cloud.
+It gives you the security of a private cloud with the cost effectiveness and scalability
+of a public cloud.
+It offers an on-demand configurable pool of shared resources allocated within a public
+cloud environment.
+There is isolation between users achieved through private IP subnets and encrypted communication
+channels.
+In a virtual private cloud, there is a function which authenticates users and provides remote
+access to the shared resources.
+This is essentially allowing organizations to work on a virtually private cloud, hence
+the name.
+Virtual private clouds provide the necessary infrastructure in isolation as a fully automated
+solution.
+Let's explore how VPC's provide customizable networking, security, and private access to
+data and storage.
+VPC's allow you to create multiple virtual private clouds in multi zone regions,
+create subnets in different zones, each region has multiple zones.
+Security groups which are created to filter each network interface by a virtual server
+based on IP address.
+You can create virtual server instances quickly using predefined profiles optimized for your
+specific workloads.
+You can use a public gateway to enable communication to the Internet for all virtual server instances
+on the attached subnet.
+You can also add block storage to your virtual private cloud instance by default, a 100 Gigabyte
+General purpose block storage volume is created automatically.
+Let's take a look at a sample architecture for an IBM virtual private cloud.
+First, when the user connects to the Internet and goes to a specific URL, they will need
+to authenticate to the network.
+This is the first blue box around our architecture.
+This will give them a certain predefined access to the network.
+We can see that the VPC Network which is deployed in a specific zone within a region where there
+are storage, virtual server instances, gateways and load balancers are also hosted
+The VPC network has access to many cloud services such as AI, databases, IoT and Container Registry.
+The network also has access to DevOps services
+including monitoring, log analysis, and continuous delivery.
+It's worth noting that right now there are two generation VPC options on IBM cloud.
+Generation one, generation two.
+With generation one, it is available in all six regions you have up to 16 gigabytes per
+second networking. With generation two
+it's available in five regions and you can get networking speeds of up to 80 gigabytes
+per second.
+Currently there is only support for provider managed security .
+Up next, we have a short demonstration to show you some highlighted features of VPC
+on IBM cloud.
+The first thing we're going to do in this video is to create a new virtual private cloud.
+We'll start by giving it a name, selecting the resource group.
+In this case the default one.
+To go along with the VPC, we're going to create a new subnet.
+We're going to go ahead and create it in the Dallas data center, and we're going to give
+it a few virtual IPs.
+And we will lastly enable a public gateway.
+From our subnet view, we can see that we have no resource is attached to it, so let's go
+ahead and create a new instance or a new virtual machine.
+From this view we're presented with our usual options when creating a new virtual machine
+such as name, location, which is tied to where our VPC is located, and a host image.
+You can also select between different profiles to give you more or less memory and CPU power.
+Much like classic virtual machines, you can add an SSH key.
+Let's go ahead and do that quickly.
+We're going to go ahead and keep the rest of the options as default.
+And create our virtual machine.
+And just like that you can create a virtual machine on a VPC.
+Let's summarize what we've learned.
+A virtual private cloud is a secure, isolated private cloud within a public cloud.
+The IBM cloud virtual private cloud service is very customizable in terms of networking,
+security, compute, and storage aspects.
+Lastly, there is a generation one and generation two virtual private cloud.
+Generation one offers more options for regions and security, but generation two has higher
+networking speeds and provisioning times.
 <br>
 
 [Go to Next Module](./3_Deploying_Applications.md)
