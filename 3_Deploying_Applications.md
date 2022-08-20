@@ -1,7 +1,6 @@
 [Back to Syllabus](/README.md#course-syllabus)
 
 ## Learning Objectives
-
 - IBM Cloud Deployment Options
 - Cloud Foundry
 - Kubernetes
@@ -10,7 +9,6 @@
 <br>
 
 ## Containers and Kubernetes
-
 - What exactly are containers?
     - A container can be thought of a packaging up your application source code dependencies, like runtimes, binaries, libraries, and data
     - Packaged up container is called an image
@@ -106,7 +104,6 @@
 <br>
 
 ## Hands-on Lab: (Optional) Deploy an Application to Kubernetes
-
 - Navigate to [link](https://cloud.ibm.com) to launch the IBM Cloud
     - Spin up a free cluster of the Kubernetes service
     - Manage and connect to your cluster using the IBM Cloud CLI
@@ -114,8 +111,6 @@
 
 ![image](https://user-images.githubusercontent.com/29455975/185631162-a837c9d8-5967-452a-ba35-e08e88f6220f.png)
 <br>
-
-
 
 ## OpenShift
 - OpenShift is based on the open source OKD Project.
@@ -223,7 +218,6 @@ You can set up fine grain assignment of compute capacity to development teams wi
 <br>
 
 ## Hands-on Lab: Deploy an Application to Cloud Foundry
-
 - Navigate to [link](https://cloud.ibm.com) to launch the IBM Cloud
    - Launch the IBM Cloud Shell
    - Clone the repo

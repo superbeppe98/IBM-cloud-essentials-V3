@@ -59,7 +59,6 @@
 
 ![image](https://user-images.githubusercontent.com/29455975/185744916-fa78df42-684c-4960-92d3-197fc58f68a2.png)
 
-
 - Benefits
   - Lite: access to over 40 services like cloud object storage and cloud databases
   - Pay-as-You-Go: account are access to all services in the catalog, access to
@@ -96,8 +95,6 @@
 - If we want to click and create a spending notification, we’ll just go on spending notifications in the left-hand side and we can click on enable here and then add in your email address and then click a threshold
 
 ![image](https://user-images.githubusercontent.com/29455975/185744962-29cdd24d-cc6f-4196-9e2c-7a91bf6f16c9.png)
-
-
 <br>
 
 ## Cost Estimator
@@ -105,7 +102,6 @@
 - The tool is supported by all IBM Cloud services ranging from AI Services to infrastructure, services and Kubernetes clusters
 
 ![image](https://user-images.githubusercontent.com/29455975/185744995-4860d283-8f2d-457e-ac8d-5af0aabb5b35.png)
-
 
 - You can download your estimate as a PDF and you can calculate your estimate in over 15 currencies
 - Next, let's go ahead and click on virtual server and then we'll add that to the list of products that we want to estimate
@@ -127,7 +123,6 @@
 ## IAM
 
 ![image](https://user-images.githubusercontent.com/29455975/185745025-e46c08d8-7264-427f-a63a-1d600da3b3fe.png)
-
 
 - In IBM Cloud, IAM is comprised of four concepts:
   - Users: these are the people that log in and use the account
@@ -165,8 +160,6 @@ one of the many other offerings
   - Resource groups have no geographical restrictions: this means you can put resources from Dallas and resources from Sydney in the same group,bringing it all together is the concept of an access policy
   - An access policy is the combination of a subject, which is a user or an access group, their role and a target, a resource or resource group
 
-
-
 - Today, I want to show you a little bit of how to create an API key and how to authenticate yourself in a terminal or command line interface with your API key and then also I want to show you how to create and invite users to your account, and then give them certain permissions over services and other resource groups
   - From the manage tab in the top tab of IBM Cloud, you can click on access or IAM, we're going to go into the left sidebar, and we'll click on API keys
   - I'm just going to create a new one and I'll call it test and, great, we can see that the API key has been successfully created We can copy it and download it, which is always a good idea
@@ -195,17 +188,15 @@ one of the many other offerings
   - So, and then let's do a test at Gmail and then all you do is add this and then you can see for this Cloud IAM services we've given them editor and writer access
 
 - So, that's a little bit about IAM and that's how you would assign users additional access
-
 <br>
 
 ## Hands-on Lab: Using the Catalog and Cloud Shell
-
 - Navigate to [link](https://cloud.ibm.com) to launch the IBM Cloud
     - Create a Cloudant database
     - Launch the IBM Cloud Shell
     - Use the IBM Cloud CLI
-![image](https://user-images.githubusercontent.com/29455975/185613164-57e09cfb-340a-44e5-8c3b-85497d9c89ed.png)
 
+![image](https://user-images.githubusercontent.com/29455975/185613164-57e09cfb-340a-44e5-8c3b-85497d9c89ed.png)
 <br>
 
 ## Module Summary

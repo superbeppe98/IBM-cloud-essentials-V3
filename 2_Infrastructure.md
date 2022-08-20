@@ -1,7 +1,6 @@
 [Back to Syllabus](/README.md#course-syllabus)
 
 ## Learning Objectives
-
 - Virtual Servers: This lesson includes a breakdown of the virtual server configurations, supported architectures, and pricing models
 - Block and File Storage: An introduction to cloud-based storage, advantages of block and file storage, and recovery options
 - Cloud Object Storage: An introduction to object storage and deep dive into the benefits of using IBM Cloud Object Storage
@@ -60,19 +59,15 @@
 <br>
 
 ## Hands-on Lab: (Optional) Upgrade your IBM Cloud account
-
 - Navigate to [link](https://cloud.ibm.com) to launch the IBM Cloud
     - Upgrade your account
-
 <br>
 
 ## Hands-on Lab:  (Optional) SSH into a Virtual Server
-
 - Navigate to [link](https://cloud.ibm.com) to launch the IBM Cloud
     - Add an SSH key to your account
     - Provision a virtual server
     - SSH into a virtual server
-
 <br>
 
 ## Block and File Storage
@@ -144,11 +139,11 @@
 <br>
 
 ## Hands-on Lab: Get to Know Cloud Object Storage
-
 - Navigate to [link](https://cloud.ibm.com) to launch the IBM Cloud
     - Create the service
     - Create a bucket
     - Download from the bucket
+
 ![2022-08-18 20 51 44 cloud ibm com 745023d27698](https://user-images.githubusercontent.com/29455975/185472076-98976a20-a7da-4f14-98b0-34c53c9aa61b.jpg)
 <br>
 
@@ -195,7 +190,7 @@
         - With direct link you can choose between speeds of 5100, 500 megabits per second or even up to five gigabits per second as your needs change
         You can transition your speed seamlessly
 
-    - IBM Cloud also provides a CDN service
+- IBM Cloud also provides a CDN service
     - A CDN is a highly distributed platform of servers to help minimize delays
         - First off, it's based off Akamai, a best of breed CDN provider to create one of the world's fastest and most reliable content delivery networks
         - Second, smarter scaling automatically scale your service globally to over 2200 points of presence in 36 countries
