@@ -12,6 +12,8 @@
 
 ## Virtual Servers
 
+![image](https://user-images.githubusercontent.com/29455975/185745151-d6c2e777-ac6b-4e5b-967e-bee107cd0645.png)
+
 - There are four types of virtual server offerings on IBM cloud
     - The first is the virtual server service: this is your usual virtual machine type service that offers a range of operating system and configurable RAM and processing power to fit your use case
     - The bare metal service: this service provides you the raw horsepower that you need for processing intensive and disk IO intensive workloads
@@ -74,6 +76,9 @@
 <br>
 
 ## Block and File Storage
+
+![image](https://user-images.githubusercontent.com/29455975/185745181-203327dd-6a15-4d8d-bfd6-ea1ce17aa70e.png)
+
 - There are three types of block and file storage related services on IBM Cloud
     - Block storage service: provides virtual servers and bare metal servers with a SAN-like iSCSI storage
     - File storage service: provides virtual servers and bare metal servers with an NFS based storage
@@ -110,6 +115,9 @@
 <br>
 
 ## Object Storage
+
+![image](https://user-images.githubusercontent.com/29455975/185745201-b4287f3d-e5a5-4707-8fc3-9036df8cef9e.png)
+
 - Object storage is great for storing vast amounts of unstructured data
     - Files are uploaded as objects and saved into buckets
     - Within a bucket, there is no directory or tree structure
@@ -148,6 +156,8 @@
 - IBM Cloud has two different services for networking
     - The first is called Cloud Internet services; this service is based on Cloudflare
     - The second is a collection of networking infrastructure services with options for Vlans, VPNs, and CDN's
+
+![image](https://user-images.githubusercontent.com/29455975/185745221-439456c7-074b-4b93-b177-707d36963901.png)
 
 - The cloud Internet services provide reliable, secure options for Internet facing applications by leveraging Cloudflare
     - Cloudflare, if you're not familiar, is a web infrastructure company that provides DNS services to 12 million websites and has over 165 points of presence all over the world
@@ -210,6 +220,8 @@
     - In a virtual private cloud, there is a function which authenticates users and provides remote access to the shared resources
     - Virtual private clouds provide the necessary infrastructure in isolation as a fully automated solution
 
+![image](https://user-images.githubusercontent.com/29455975/185745252-9836bc54-4dde-4605-ba8d-fd0ab598ad2a.png)
+
 - VPC's allow you to create multiple virtual private clouds in multi zone regions, create subnets in different zones, each region has multiple zones
     - Security groups which are created to filter each network interface by a virtual server based on IP address
     - You can create virtual server instances quickly using predefined profiles optimized for your specific workload
@@ -236,6 +248,8 @@
     - VMware software was deployed to servers and data centers all over the world
     - In fact, many IBM clients were using VMware or still using VMware to this day
     - In 2016, IBM Cloud became the first cloud vendor to bring VMware services to the cloud
+
+![image](https://user-images.githubusercontent.com/29455975/185745280-23caf1bf-43c2-40ec-8dfb-8dc964b0ab61.png)
 
 - Why migrate workloads?
     - The 1st and biggest reason is to bring cloud economies to VMware workloads

@@ -28,6 +28,8 @@
 - Last up, we have image registries
     - These can be both private and public, will be getting to that a little bit more later
 
+![image](https://user-images.githubusercontent.com/29455975/185745323-85ec6fa4-9b6b-4359-88d3-e03fac46ec76.png)
+
 - So why use container?
     - There are many reasons why
     - Here are a few, the first being that it's portable
@@ -116,12 +118,13 @@
 
 
 ## OpenShift
-
 - OpenShift is based on the open source OKD Project.
     - OKD is the community distribution of Kubernetes that Powers OpenShift.
     - OpenShift is a layer that's built on top of Kubernetes
     - OpenShift makes a lot of the difficult tasks like deploying applications and doing day-to-day administrative operations easier by extending Kubernetes in an opinionated way
     - OpenShift like Kubernetes is also deployable on premises or in a cloud and with the exception of OKD, OpenShift benefits from enhanced security from being run on RHEL
+
+![image](https://user-images.githubusercontent.com/29455975/185745362-42ee0706-f893-43b1-a153-d228b8fe375a.png)
 
 - Let's compare Kubernetes and OpenShift side-by-side
     - With Kubernetes you have just the core framework
@@ -173,6 +176,8 @@
 
 ## Cloud Foundry
 
+![image](https://user-images.githubusercontent.com/29455975/185745404-0dba69b6-fa4f-473a-b235-d3f77bdc573f.png)
+
 - Cloud Foundry is an example of a Platform as a Service offering or PaaS
     - With Paas offerings, such as Cloud Foundry, you don't have to worry about the underlying infrastructure like runtimes, operating systems or servers
     - It enables you to focus exclusively on your application, code and data
@@ -217,7 +222,22 @@ You can set up fine grain assignment of compute capacity to development teams wi
     - This includes Java, node.js, Python, Go, Swift, PHP.net, Tomcat ,and Ruby
 <br>
 
+## Hands-on Lab: Deploy an Application to Cloud Foundry
+
+- Navigate to [link](https://cloud.ibm.com) to launch the IBM Cloud
+   - Launch the IBM Cloud Shell
+   - Clone the repo
+   - Deploy the application
+   - Access the web app
+   - Clean up
+
+![image](https://user-images.githubusercontent.com/29455975/185745464-68061926-8c9d-45df-b550-d64f285a068b.png)
+<br>
+
 ## Cloud Functions
+
+![image](https://user-images.githubusercontent.com/29455975/185745484-4228194c-6dfc-4f6d-82a1-0198001cfcc7.png)
+
 - What is serverless?
     - Serverless computing refers to the concept of building and running applications that well, do not require server management
     - It describes a finer grade deployment model where applications bundled as one or more functions are uploaded to a platform and then executed, scaled, and built in one response to the exact demand needed at the moment
