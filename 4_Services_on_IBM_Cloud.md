@@ -280,131 +280,49 @@
 <br>
 
 ## Blockchain
-In this video, we're going to talk about blockchain on IBM Cloud.
-We'll first covering the blockchain data structure, smart contracts and consensus, and then we'll
-look at hyperledger fabric and the IBM blockchain platform.
-We'll end with showing a demo of how to use smart contracts to record transactions on
-a blockchain network.
-Let's get started.
-What is a blockchain?
-A blockchain is a growing list of records, called blocks that are linked using cryptography.
-Each block contains a cryptographic hash of the previous block, timestamp, and transaction
-data.
-By design, A blockchain is resistant to modification of the data.
-Once recorded, the data in any given block cannot be altered retroactively without alteration
-of all subsequent blocks, which requires consensus of the network majority.
-So, here we have a demo of the blockchain data structure and we have the data and the
-previous hash.
-And then the hash.
-And then we can see this is the Genesis Block, which just means is the first block and then
-we have the timestamp.
-So, what we're going to do is we're going to add some data and add a new block, and
-we're going to just say hello from IBM Cloud in the data field.
-We'll add that block, and we can see the data is reflected in that block.
-And the important thing to note is that previous hash 7CF.
-We can see it's the same as the hash of the Genesis Block.
-And our current hash for block number 1 ends in four, 1, four and the timestamp is August
-24th.
-And now if we add another block we can say hello from San Francisco, add that block and
-we can see the previous block ends in 414.
-Just like we are expecting it to and then we have our timestamp there and then we have
-that hash.
-Let's talk about some key elements of a blockchain network.
-Blockchains are distributed permanent and record transaction between two parties.
-They are distributed.
-All network participants have access to the distributed Ledger and it's immutable record
-of transactions.
-They're also immutable.
-No participant can change or tamper with the transaction after it's been recorded to the
-shared Ledger, and they use smart contracts to speed transactions.
-A set of roles called Smart contracts is stored on the Blockchain and executed automatically.
-What is hyperledger fabric?
-Hyperledger fabric is an implementation of blockchain technology that is designed as
-the foundation for developing blockchain applications.
-It has an emphasis on ledger, mark objects, confidentiality, resiliency, and scalability.
-Due to popularity, hyperledger fabric has been adopted by major cloud providers including,
-Alibaba, AWS, Azure, Google, IBM, and others.
-Hyperledger fabric is an Apache two licensed open source project with the founding codebase
-originally donated to the Linux Foundation by IBM and digital asset.
-Let's take a deeper dive into smart contracts within hyperledger fabric.
-Smart contracts are required to create a blockchain application with hyperledger fabric.
-Fabric offers SDK's in node.js and Java and support for Python and Go is planned for later
-releases.
-Smart contracts are executed to change or read a value in the world state.
-These smart contract executions are recorded as transactions within the blocks on the Blockchain.
-In this way, we have a tamper-proof history of all transactions which have happened on
-a particular blockchain network.
-Let's talk a little bit about consensus.
-Consensus is the process by which nodes agree on the order of transactions.
-There are multiple ways of doing consensus, however you do it, the aim of consensus is
-to get from the before state on the left to the after state on the right.
-In this case, there are four nodes, two of which think that the world state is ABC.
-One mistakenly thinks it's DEF due to network latency and one is a malicious node who will
-do anything to convince you that the world state is XYZ.
-Consensus will get to a situation where all the good nodes agree that the world state
-is ABC and the bad node is just ignored.
-Consensus assumes that there is a sufficient portion of good actors on the network who
-are trustworthy.
-The value of Blockchain comes from participants sharing common smart contracts and agreeing
-on the source of truth.
-Since transactions are automated, participants can be assured money is received upon the
-agreement of their contract.
-Participants also have visibility into the history of a particular asset and how that
-ownership has changed overtime.
-This is the IBM blockchain platform in a single chart.
-It's based on hyperledger fabric and runs on the IBM Cloud platform, although other
-options are available.
-IBM blockchain platform aims to help with the entire lifecycle of a blockchain solution
-from inception through the deployment and beyond.
-There are set of tools for the solution development as well as tools to allow clients to govern
-and operate blockchain business networks.
-IBM's key differentiators are advanced tooling for building, operating, and growing blockchain
-networks and the ability to deploy blockchain networks anywhere.
-Now, let's take a look at the IBM blockchain platform in more detail.
-Here is the IBM blockchain platform console and where you can see your blockchain nodes.
-They have the peers, peer one here.
-We have the certificate authorities which give away the public and private keys on the
-network and then we have the ordering service which actually keeps track of the channel
-and the order of the blocks.
-So now we on the left we have smart contracts, our wallet, organizations, and the users on
-the network.
-Also, we have settings as well.
-First, we can take a look at organizations an we can see we have our org one MSP and
-then the order MSP.
-We can check our wallet, and this is where our credentials are so our public and private
-keys are here.
-And then we have the smart contracts we have currently.
-One smart contract called voter contract that's installed on the network and on the channel
-we have one channel called my channel.
-And here if we go to the Org One Certificate Authority, we can see that to actually use
-an app and to submit transactions to the smart contract, we need to actually get the location
-of that org One CA,
-and since it's deployed on Kubernetes, we have our URL for our certificate authority
-here and we can see that in our application we have this file called IBM blockchain platform
-connection,
-and this is where we list all the different members of our network, such as the certificate
-authorities, the peers, and the ID's and then the URL's to reach those peers.
-So you can see that that same certificate authority URL is used.
-So, now that in our application we have we have that connection profile that talks to
-the peers and the certificate authorities.
-We can submit transactions to the channel.
-So now we have six blocks in my channel.
-And we can see the block history here.
-The last transaction was on the 31st of August.
-So now we have an application running on localhost 8080 and this one is connected to the blockchain
-platform using that connection profile that I showed you earlier.
-So, we have a very simple application and we're just going to submit a transaction to
-the smart contract.
-So, when I create this form and I submit it, I'm going to update that in the smart contract.
-So you can see, now when I update our last transaction is today which is September 2nd
-and in that transaction I'm going to have whatever I wrote in the application which
-was E 311311.
-My first name and last name Horea Porutiu in San Francisco and you can see that that
-smart contract being referenced up there.
-Photo contract 700.
-So, you can see that this is being recorded.
-We have the transaction ID and this is that new block being added.
-So that was a really quick demo and overview of what the blockchain platform looks like.
+- What is a blockchain?
+    - A blockchain is a growing list of records, called blocks that are linked using cryptography
+    - Each block contains a cryptographic hash of the previous block, timestamp, and transaction data
+    - By design, A blockchain is resistant to modification of the data
+    - Once recorded, the data in any given block cannot be altered retroactively without alteration of all subsequent blocks, which requires consensus of the network majority
+
+- Let's talk about some key elements of a blockchain network
+    - Blockchains are distributed permanent and record transaction between two parties
+    - They are distributed
+    - All network participants have access to the distributed Ledger and it's immutable record of transactions
+    - They're also immutable
+    - No participant can change or tamper with the transaction after it's been recorded to the shared Ledger, and they use smart contracts to speed transactions
+    - A set of roles called Smart contracts is stored on the Blockchain and executed automatically
+
+- What is hyperledger fabric?
+    - Hyperledger fabric is an implementation of blockchain technology that is designed as the foundation for developing blockchain applications
+    - It has an emphasis on ledger, mark objects, confidentiality, resiliency, and scalability
+    - Due to popularity, hyperledger fabric has been adopted by major cloud providers including Alibaba, AWS, Azure, Google, IBM, and others
+    - Hyperledger fabric is an Apache two licensed open source project with the founding codebase originally donated to the Linux Foundation by IBM and digital asset
+
+- Let's take a deeper dive into smart contracts within hyperledger fabric
+    - Smart contracts are required to create a blockchain application with hyperledger fabric
+    - Fabric offers SDK's in node.js and Java and support for Python and Go is planned for later releases
+    - Smart contracts are executed to change or read a value in the world state
+    - hese smart contract executions are recorded as transactions within the blocks on the Blockchain
+    - In this way, we have a tamper-proof history of all transactions which have happened on a particular blockchain network
+
+- Let's talk a little bit about consensus
+    - Consensus is the process by which nodes agree on the order of transactions
+    - There are multiple ways of doing consensus, however you do it, the aim of consensus is to get from the before state on the left to the after state on the right
+    - In this case, there are four nodes, two of which think that the world state is ABC
+    - One mistakenly thinks it's DEF due to network latency and one is a malicious node who will do anything to convince you that the world state is XYZ
+    - Consensus will get to a situation where all the good nodes agree that the world state is ABC and the bad node is just ignored
+    - Consensus assumes that there is a sufficient portion of good actors on the network who are trustworthy
+    - The value of Blockchain comes from participants sharing common smart contracts and agreeing on the source of truth
+    - Since transactions are automated, participants can be assured money is received upon the agreement of their contract
+    - Participants also have visibility into the history of a particular asset and how that ownership has changed overtime
+
+- This is the IBM blockchain platform in a single chart
+    - It's based on hyperledger fabric and runs on the IBM Cloud platform, although other options are available
+    - IBM blockchain platform aims to help with the entire lifecycle of a blockchain solution from inception through the deployment and beyond
+    - There are set of tools for the solution development as well as tools to allow clients to govern and operate blockchain business networks
+    - IBM's key differentiators are advanced tooling for building, operating, and growing blockchain networks and the ability to deploy blockchain networks anywhere
 <br>
 
 ## Internet of Things
@@ -441,70 +359,53 @@ So that was a really quick demo and overview of what the blockchain platform loo
 
 ## Cloud Paks
 - What are IBM Cloud Paks?
-Cloud Paks are containerized software solutions built to run anywhere?
-I like to think of it as a bundle of continuous software.
-The goal of the Cloud Pak is to make container management and application modernization easier
-for an organization.
-Cloud Paks come in a variety of use cases, which we'll explore later.
-For now, let's look at the values of Cloud Paks.
-Cloud Paks have a modular architecture, meaning you can pick and choose which software you
-want to deploy.
-Cloud Paks put AI to work.
-They operationalize AI throughout your business.
-Cloud Paks are built on OpenShift, which allows them to run anywhere.
-So, what do we mean by anywhere?
-Cloud Paks can be run on any platform you choose.
-You can install them on IBM Cloud.
-You can install them on premise.
-Use your own hardware or with the Cloud Pak system, or you can install them on any cloud
-by first provisioning OpenShift and then installing Cloud Paks on top.
-The following picture is a representation of how different Cloud Paks are available.
-The six Cloud Paks that we will cover are applications, data, integration, automation,
-security, and multi-cloud management.
-The Cloud Pak for applications has tools to help you modernize existing applications and
-build new cloud native ones.
-The four main capabilities are:
-Accelerator' for cloud native development, which bring together open source technologies
-and put them in a microservices based framework.
-IBM modernization and developer tools.
-Modernization guidance gives you a plan to start strategically updating your applications.
-A Java EE platform is a collection of Java APIs that help you write secure, flexible
-server side applications.
-Mobile app development tools for building apps for mobile, wearables, conversation,
-web or progressive web apps.
-Cloud Pak for data has the following features built in:
-It has a single platform that integrates data management, data governance, and analysis.
-It has databases so you can spin up your favorite IBM or open source database.
-It has data governance built in, like automated discovery and classification of data, and
-masking of sensitive data.
-It also has data virtualization so you can query easily across multiple sources, on cloud
-or on premises.
-It has IBM Cloud AI services, such as Watson Assistant or Discovery.
-And it has AI model lifecycle tools, such as Jupyter or RStudio to create notebook,
-serve them with Watson Machine Learning, or automate the whole process with Auto AI
-Cloud Pak from Multi Cloud Management is an IT management platform designed to provide
-full visibility and control wherever your workloads run.
-Using the dashboard, you can monitor application lifecycle management so you can deploy and
-move application across clouds.
-It provides cloud protection and compliance with automated policy enforcement and compliance
-testing.
-It has built in SRE tooling with AI OPS to use event correlation and machine learning
-to improve operational efficiency and readiness.
-It also has many add-on capabilities from IBM partners such as Turbonomic, Sysdig, Humio,
-and Hazelcast..
-Cloud Pak for integration is a complete set of integration capabilities to efficiently
-connect your applications and data wherever they live.
-You can use API connect, app connect, MQ and event streams and you have the Aspera high
-speed data transfer so you can move data of any size around the world at maximum speed.
-IBM Cloud Pak for security is a platform that helps you uncover hidden threats.
-Make more informed risk-based decisions and prioritize your teams' time.
-It has core platform services such as threat, intelligence, insights, and data Explorer,
-and has integrations with existing tools and data such as Qradar and Splunk.
-The IBM Cloud Pak for automation provides applications in core areas where automation
-provides benefits, content, workflow, decisions, and capture cloud fact for automation.
-Provides low code consumable tools, API's and application connectors that make it easy
-to consume content in business applications.
-You can also automate your end to end workflow with IBM business automation workflow and
-you can use IBM operational decision manager to automate the implementation of business
-policies in your organization.
+    - Cloud Paks are containerized software solutions built to run anywhere?
+    - I like to think of it as a bundle of continuous software
+    - The goal of the Cloud Pak is to make container management and application modernization easier for an organization
+    - Cloud Paks come in a variety of use cases, which we'll explore later
+
+- For now, let's look at the values of Cloud Paks
+    - Cloud Paks have a modular architecture, meaning you can pick and choose which software you want to deploy
+    - Cloud Paks put AI to work
+    - They operationalize AI throughout your business
+    - Cloud Paks are built on OpenShift, which allows them to run anywhere
+
+- So, what do we mean by anywhere?
+    - Cloud Paks can be run on any platform you choose
+    - You can install them on IBM Cloud
+    - You can install them on premise
+    - Use your own hardware or with the Cloud Pak system, or you can install them on any cloud by first provisioning OpenShift and then installing Cloud Paks on top
+
+- The six Cloud Paks that we will cover are applications, data, integration, automation, security, and multi-cloud management
+    - The Cloud Pak for applications has tools to help you modernize existing applications and build new cloud native ones
+
+- The four main capabilities are:
+    - Accelerator' for cloud native development, which bring together open source technologies and put them in a microservices based framework
+    - IBM modernization and developer tools
+        - Modernization guidance gives you a plan to start strategically updating your applications
+    - A Java EE platform is a collection of Java APIs that help you write secure, flexible server side applications
+    - Mobile app development tools for building apps for mobile, wearables, conversation, web or progressive web apps
+
+- Cloud Pak for data has the following features built in:
+    - It has a single platform that integrates data management, data governance, and analysis
+    - It has databases so you can spin up your favorite IBM or open source database
+    - It has data governance built in, like automated discovery and classification of data, and masking of sensitive data
+    - It also has data virtualization so you can query easily across multiple sources, on cloud or on premises
+    - It has IBM Cloud AI services, such as Watson Assistant or Discovery
+    - And it has AI model lifecycle tools, such as Jupyter or RStudio to create notebook, serve them with Watson Machine Learning, or automate the whole process with Auto AI
+
+- Cloud Pak from Multi Cloud Management is an IT management platform designed to provide full visibility and control wherever your workloads run
+    - Using the dashboard, you can monitor application lifecycle management so you can deploy and move application across clouds
+    - It provides cloud protection and compliance with automated policy enforcement and compliance testing
+    - It has built in SRE tooling with AI OPS to use event correlation and machine learning to improve operational efficiency and readiness
+    - It also has many add-on capabilities from IBM partners such as Turbonomic, Sysdig, Humio, and Hazelcast..
+
+- Cloud Pak for integration is a complete set of integration capabilities to efficiently connect your applications and data wherever they live
+    - You can use API connect, app connect, MQ and event streams and you have the Aspera high speed data transfer so you can move data of any size around the world at maximum speed
+    - IBM Cloud Pak for security is a platform that helps you uncover hidden threats
+    - Make more informed risk-based decisions and prioritize your teams' time
+    - It has core platform services such as threat, intelligence, insights, and data Explorer, and has integrations with existing tools and data such as Qradar and Splunk
+    - The IBM Cloud Pak for automation provides applications in core areas where automation provides benefits, content, workflow, decisions, and capture cloud fact for automation
+    - Provides low code consumable tools, API's and application connectors that make it easy to consume content in business applications
+    - You can also automate your end to end workflow with IBM business automation workflow and you can use IBM operational decision manager to automate the implementation of business policies in your organization
 <br>
