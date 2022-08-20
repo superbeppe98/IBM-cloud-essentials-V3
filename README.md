@@ -21,6 +21,6 @@
 - Graded Quiz(50%, no time limit) + Final Exam(50%, 1-hour time limit)
 <br>
 
-## Badge & Certificate
+## Badge
 ![ibm-cloud-essentials 2](https://user-images.githubusercontent.com/29455975/185745070-7e16d5c3-58f1-44a1-8817-e7fb41da27ab.png)
 <br>
