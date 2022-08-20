@@ -187,8 +187,8 @@ one of the many other offerings
     - Create a Cloudant database
     - Launch the IBM Cloud Shell
     - Use the IBM Cloud CLI
-
 ![image](https://user-images.githubusercontent.com/29455975/185613164-57e09cfb-340a-44e5-8c3b-85497d9c89ed.png)
+
 <br>
 
 [Go to Next Module](./2_Infrastructure.md)

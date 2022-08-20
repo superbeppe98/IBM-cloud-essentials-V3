@@ -55,14 +55,6 @@
     - Unsurprisingly, the virtual server option is the cheapest
     - In terms of performance, the power systems an bare metal, had the most to offer and in
     terms of security, it's hard to beat the Linux one offering up
-
-- Next, we're going to go ahead and configure, create, and connect to a virtual server instance
-    - From the IBM cloud catalog, we can see the different options we can choose from virtual server, bare metal, hyper, protect and power systems
-    - You can see the different profiles that are available for virtual servers
-    - After a few minutes our virtual server will be spun up
-    - Let's click on the link to see some details about the server
-    - On the top right, we have in action button; that lists all the different kinds of actions we can take with the virtual server, such as shutdown, reset
-    - Let's open up a terminal and try an SSH into our machine
 <br>
 
 ## Hands-on Lab: (Optional) Upgrade your IBM Cloud account
@@ -115,17 +107,6 @@
 
 - Lastly, there's also Geo Redundancy
     - You can protect your data across geographically dispersed sources
-
-- Up next, we have a quick demonstration of how to attach a volume onto a virtual server
-    - From the IBM cloud catalog, we're going to go ahead and find the file storage service
-    - We're going to go ahead and select the data center that's associated with our virtual machine and deploy a virtual machine
-    - Go back to your device list, find the virtual machine that you want to attach the storage to
-    - Find the file storage section, click authorize storage
-    - Go ahead and click the storage volume that we just created.
-    - We have to go into the system and Mount it.
-    - You'll find the Mount Point value when you go and see the file storage properties.
-    - So, let's SSH into our VM again.
-    - And show that it is in fact mounted on /NFS/extra.
 <br>
 
 ## Object Storage
@@ -152,18 +133,6 @@
     - The vault storage class is ideal for data which needs to be accessed once a month or less
     - This is cheaper than the standard storage class, but a bit more expensive than the coldvault option
     - The cold vault option is usually used for archives where data is only accessed a few times per year
-
-- Up next, we have a quick demonstration about how to use the IBM Cloud object storage service
-    - Now we've already spun up a cloud object storage service
-    - We're going to go ahead and click the create a bucket option
-    - We're just going to go ahead and click the quick start option
-    - It'll automatically set up a smart tier storage class bucket
-    -We can go ahead and change the bucket name if you'd like and optionally upload a few files
-    - Alright, we can see our objects have been uploaded successfully
-    - From here, let's go ahead and change the access policy for this bucket
-    - Click on the public access tab and choose to enable public access
-    - You can see now that the public access setting in the bucket level view has been enabled; you can see a URL that you can use
-    - We now verify that our objects are publicly accessible
 <br>
 
 ## Hands-on Lab: Get to Know Cloud Object Storage
@@ -258,15 +227,6 @@
     - With generation one, it is available in all six regions you have up to 16 gigabytes per second networking
     - With generation two, it's available in five regions and you can get networking speeds of up to 80 gigabytes per second
     - Currently there is only support for provider managed security
-
-- Up next, we have a short demonstration to show you some highlighted features of VPC on IBM cloud
-    - The first thing we're going to do in this video is to create a new virtual private cloud 
-    - We'll start by giving it a name, selecting the resource group
-    - To go along with the VPC, we're going to create a new subnet
-    - We're going to go ahead and create it in the Dallas data center, and we're going to give it a few virtual IPs
-    - And we will lastly enable a public gateway
-    - Create the virtual machine and assign the VPC
-    - And just like that you can create a virtual machine on a VPC
 <br>
 
 ## Vmware
@@ -334,20 +294,6 @@
     - First, we're going to talk about Veeam; it allows you to backup and replicate virtual machines on VM Ware easily
     - Next is Zerto, which assists with creating and managing disaster recovery with VMware
     - And lastly, we have the F5 Big IP Suite of products: these help in networking and security related tools for your VMware solution; it covers things like load balancing, firewalls, DNS and more
-
-- Up next, we have a quick demonstration of how to configure a VMware solution on IBM Cloud
-    - We can see our options for a shared and dedicated offering
-    - There's also a list of the different services and integration points that are offered on VMware cloud solutions
-    - These range from professional services to security compliance to business continuity
-    - You can choose between a single zone or multi-zone cluster
-    - View the different type of instance configurations
-    - And here you can choose the different vSphere versions, such as 6.5
-    - You can provide all your licenses upon creation of your cluster or you can purchase them from IBM Cloud
-    - And here you can see the different locations to which you can provision a bare metal server for your VMware solution
-
-    - Let's go and take a look at the shared solution
-    - We have on demand and reserved instances
-    - Recall that these values can be changed on the fly
 <br>
 
 [Go to Next Module](./3_Deploying_Applications.md)

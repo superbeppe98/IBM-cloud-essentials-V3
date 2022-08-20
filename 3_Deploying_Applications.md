@@ -101,37 +101,6 @@
     - You first start off by logging into your IBM Cloud account
     - You select a region, you select a resource group, then you list or push images into a container registry with the IBM Cloud CR images command
     - You can list or create new Kubernetes clusters with the IBM Cloud KS command, and you can interact with your Kubernetes cluster with the kubectl Command
-    
-- Up next, we have a quick demonstration of how to spin up a IBM Cloud Kubernetes service, access it, and deploy a sample application
-    - The first thing we need to do to get started with Kubernetes on IBM Cloud is to spin up a cluster
-    - You can see you can flip through the bare metal and virtual shared and virtual dedicated offerings
-    - Clicking on the overview and the worker nodes you can see details about your cluster
-    - Clicking add ons, you can see the different channels that you can install, like STNK native
-    - Alright, let's run an application
-    - I've downloaded a simple hello world node application here and we've logged into our IBM Cloud account
-    - We're going to set the Kubernetes context to be specific to the new cluster that we just set up here and now we're going to run the CR commands, which are to log into the container registry, cause we're going to be storing our containerized application in the IBM Cloud container registry
-    - We can see the kubectl commands are already working
-    - We can do get pods, get nodes, and we have information about our cluster
-    - Let's take a look at our container registry
-    - We've already run some of these commands, but let's go ahead and create a new name space to store our images, let's call it samples
-    - Build our code locally with Docker Build and we're going to tag it and upload it to the IBM Cloud container registry
-    - You can see the new samples namespace is being created here
-    - We have some deployment and service YAML files
-    - These are going to set the ports that are required and the image location
-    - Let's go ahead and apply these YAML files
-    - Let's issue a rollout command stating their application has been rolled out
-    - Let's find our external IP by running the get services command
-    - Before we view the applications, take a look at the embedded Kubernetes dashboard that's available
-    - See here, we have one deployment, one pod, and going to the external IP, we can see our hello world application running
-
-    - Alright, what if we want to make an update to this?
-    - What if we want version two?
-        - Well, first thing we need to do is update the code and we need to rebuild our image and push it into the IBM Cloud container registry.
-        - Refreshing the container registry, we'll see that we now have two images in our namespace.
-        - And we're also going to update one of the configuration file to point to the latest version of our image.
-        - Let's reapply our YAML files and let's run that rollout command again.
-        - Refreshing our external IP, we can see we are now running version 2, just that easy.
-        - We can scale our containerized application to three deployments or three replicas.
 <br>
 
 ## Hands-on Lab: (Optional) Deploy an Application to Kubernetes
@@ -200,50 +169,6 @@
     - Two things to point out code ready containers will spin up a minimal cluster on a local machine, which is ideal for a dev and test purposes
     - And the OpenShift playground is available online with no sign up required
     - It's great for experimenting, but only available for 60 minutes up next
-
-- We're going to have a quick demonstration of spinning up an OpenShift cluster on IBM Cloud
-    - Accessing it and deploying a sample application
-    - Getting started with Red Hat OpenShift on IBM Cloud is similar to getting started with the Kubernetes service on IBM Cloud
-    - Go to the cloud catalog, find the Red Hat OpenShift
-    - Click it and start configuring your cluster
-    - You see, the overview page looks very similar to that of the Kubernetes cluster from the previous lesson
-    - We have our worker nodes, worker pools, and add ons
-    - To truly get started with OpenShift, let's click on that OpenShift Web console link at the top right
-    - Find your username on the top right and click login
-    - Here you can find the OC command used to log into the cluster
-    - Let's pop open a router and deploy the same application that we did in the previous lesson
-        - We start by running the OC new project command
-        - And we're going to create a new project called samples
-        - Refreshing our console, we can see these samples project is now available
-        - Let's run the OC new app command
-        - We're going to point it to the Git repository
-        - And you can see by going to the developer point of view you can see the topology
-        - We've already got one deployment up and running
-        - Let's run the OC exposed command
-    - That'll give us a route
-        - And running the OC get routes command will list all the routes available
-        - Before we click on the open URL button, notice that the build is actually still running
-        - Let's click on that build
-        - You can see here it's actually generating a dockerfile automatically
-        - It's not using the one that is built into the directory
-        - This is leveraging source to image
-        - It's going to automatically detect that node.js is being used and attempt to build an image from your source code
-        - You can see that it's also pushing the image to OpenShift's internal registry
-        - Now that the push is complete, let's click on our deployment
-        - We can click on the pods that are associated with it, click on the logs there
-        - We can see our application is up and running
-        - Now let's click that open URL button
-        - And there's our message
-    - Going back to the topology and clicking the overview tab, we can scale up and create three replicas
-        - There are many other actions you can take from the OpenShift Console
-        - We're going to save that for a different course
-        - From the administrative point of view, you can see the pods that are available
-        - Let's wrap this up by deleting some of the artifacts that we had created
-        - Here's our deployment config
-        - Let's start deleting that
-        - That'll automatically scale down our application and start deleting the pods
-        - And refreshing our page will make it unavailable
-    - To delete the cluster, we go back to the cluster overview page and go to the actions menu
 <br>
 
 ## Cloud Foundry
@@ -290,37 +215,6 @@ You can set up fine grain assignment of compute capacity to development teams wi
     - This is good enough for most weekend projects
     - There are many Cloud Foundry runtimes that are supported on IBM Cloud
     - This includes Java, node.js, Python, Go, Swift, PHP.net, Tomcat ,and Ruby
-
-- Up next, we have a quick demonstration of how to deploy a sample application on Cloud Foundry on IBM Cloud
-    - To get started with Cloud Foundry, we're going to go to the Cloud Foundry overview page
-    - You can see we have no applications or services running
-    - I've pulled down some code here
-    - It's our hello world application that we've been using in previous exercises
-    - You can see a file manifest.YAML that is specific to Cloud Foundry
-    - See, here we have the name, the build pack, and memory and instances
-    - Now to get started, we're going to log into IBM Cloud
-        - We're gonna run the CF push command
-        - You can see our application is already registered on the console
-        - It's still building, and we have some output there
-        - Alright, we can see our memory is defaulted to 256 megabytes
-         -We can increase that if we like
-        - We can increase the number of instances
-        - You can see the logs available here and clicking on the open URL
-    - There we see our hello world message
-    - We can edit the name
-    - Increase the number of instances
-    - And we can also stop our application
-    - To delete it, simply go to the action menu and click delete
-    - Remember to delete the route also
-    - And there's a very basic example of deploying an application on Cloud Foundry
-<br>
-
-## Hands-on Lab: Deploy an Application to Cloud Foundry
-
-- Navigate to [link](https://cloud.ibm.com) to launch the IBM Cloud
-    - Spin up a free cluster of the Kubernetes service
-    - Manage and connect to your cluster using the IBM Cloud CLI
-    - Run kubectl commands from the IBM Cloud Shell
 <br>
 
 ## Cloud Functions
@@ -365,23 +259,6 @@ You can set up fine grain assignment of compute capacity to development teams wi
         - Periodic intervals so that they can run every few hours or at a specific time or date, either one time or repeatedly
     - Cloud functions on IBM Cloud support many different runtimes
         - You have the option of choosing from Java, Node, Python, Go, Swift, PHP, Ruby or any other language or framework by leveraging containers
-
-- Up next, we have a quick demonstration of using the cloud functions feature on IBM Cloud
-    - To start playing around with our cloud functions
-    - We're going to go to the cloud functions overview page
-    - And click on the start creating button
-    - You can see here we can create an action trigger or sequence to speed things up
-    - We're going to use a quick start template
-        - There are templates for a hello world application cloud and events, event streams, periodic Slack reminder
-        - We're going to go ahead and use the get HTTP resource template
-    - You can see here that you can choose the different programming language that you'd like to use, like Node or Python And it's going to give you a templated code
-    - Clicking create will create the action in your namespace
-        - You can edit the code and run it locally with the invoke button
-        - Clicking on the parameters, you can set environment variables like API keys
-    - You can also view details about your runtime, like what programming language you're using and what your time and memory limit are
-    - The endpoints is interesting over here, 'cause now you have a publicly accessible URL you can use
-- This has been a basic example of a serverless action
 <br>
-
 
 [Go to Next Module](./4_Services_on_IBM_Cloud.md)

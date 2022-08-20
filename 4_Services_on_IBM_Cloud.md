@@ -13,81 +13,66 @@
 <br>
 
 ## Databases
-A database is an organized collection of data stored on a computer.
-Traditionally, this was done via rows and columns as commonly seen in the relational or SQL database.
-Now, databases have evolved into storing information in ways that do not depend on SQL which are commonly referred to as NoSQL.
-Databases are used for a variety of use cases, ranging from storing personal or employee information, transaction history or customer data.
-You'll see them in just about any application you're using.
-There are many types of databases, so we'll cover three types as they relate to services available on IBM Cloud.
-First, we have a relational database, which is an example of a SQL database.
-A relational database is a collection of data organized into a table structure, organized into rows and columns.
-Structured query language, SQL is typically the standard programming language used to update and query the database.
-Relational databases are also great for asset compliance and high transaction applications such as online transaction processing.
-Next, we have document databases.
-There an example of a non-SQL database document.
-Databases have flexible schemas.
-They're best suited to store semi structured data and it can handle dynamic querying.
-Some common use cases for document stores include customer data, user generated content, and order data.
-Lastly, we have a key value database.
-Another example of a non-SQL database.
-A key value database is a non-relational database that stores data as a collection of key value pairs in which a key serves as a unique identifier.
-Common use cases for these types of databases are leaderboards, caches, and shopping cart data
-Database as a service is a cloud computing service that lets users access and use a cloud database system without purchasing and setting up their own hardware, installing their own database software, or managing the database themselves.
-Database as a service or DBaaS offers your organization significant financial, operational and strategic benefits.
-First, we have simpler, less costly management.
-With database as a service,the cloud provider manages everything.
-Although you can choose to manage certain aspects yourself if you wish.
-Scalability, you can quickly and easily provision additional storage and computing capacity at runtime if you need it, and you can scale down your database cluster during non-peak usage times to save cost.
-And you have rapid development and faster time to market.
-With DBaaS, developers can help themselves to database capabilities and spin up and configure a database that's ready to integrate with their application in minutes.
-IBM Cloud has a few different options in terms of relational databases.
-Db2, a fully hosted, highly performant relational data store running the enterprise class Db2 database engine.
-We also have Db2 hosted which lets you run Db2 with full administrative access on cloud infrastructure.
-Then we have my SQL, one of the most popular databases.
-It is free an under the GNU General Public License and also Postgres.
-Postgres is an open source object relational database with over 30 years of history.
-Next, let's talk a little bit about document databases on IBM Cloud.
-First, we have MongoDB, which is the most popular document database and is available as a managed service on IBM Cloud.
-It features a flexible data model, high availability, automated backup orchestration, auto scaling and coupled allocation of storage RAM, and vCPUs and is HIPAA compliant.
-Next, we have clouded, which is IBM's database as a service based on Apache's CouchDB.
-It has a 99.99% service level agreement.
-Next, we have Elasticsearch which is IBM Cloud's enterprise-ready fully managed solution for JSON document indexing and full text search capabilities.
-Next, we'll talk about the key value databases on IBM Cloud.
-We have two options for that.
-First is Reddis, which is an open source in memory data structure store, used as a database,
-cache, and message broker.
-Next, we have etcd, which is an object relational database management system with an emphasis on extensibility and on standards compliance.
-Next, we're going to go into a little bit more detail on using the cloudant database.
-So, here, we're in our IBM Cloud and we've already provisioned a cloudant database service,
-and we're here in the manage tab of that service.
-You can see we have a button to launch the dashboard and we have our external endpoint here.
-So later in the video will be making a curl request to that external endpoint.
-Now we've launched their dashboard and we see we've created a database here called demo IBM Cloud essentials.
-We can see that the number of docs is three and here, once we click that database, we see our documents and currently they are shown in meta data format.
-But we can change the table format and then we can go back to metadata and go into JSON.
-So you can see these three documents.
-Each document has a name, city, and professional key, and then it has different value associated with that.
-The first document has my name and my city.
-The second document has Bob Simon, so it's a different person and it has their city and profession, and the next document has Dana Porutiu you.
-And then it has a different city and a profession.
-So what we're going to be doing later on in the video is making a query to this database.
-So now we're going to go ahead to our terminal and we're going to show you a sample query.
-So, here is a JSON, which uses a selector to make a query.
-So, this is what cloudant enables us to do.
-So, for our selector we're looking for the name field.
-And we're going to, we're looking for Horea Porutiu specifically.
-So, we should be able to return that document which has that key and value pair name where Horea Porutiu.
-So here we're making that curl request.
-You can see we're using curl and then we have that external endpoint that we showed you earlier.
-And then you can see we're doing /demo-ibmcloudessentials.
-That's the database name that we've created, and we're doing a find, so we're using the find operation.
-So we're going to find the documents in that database that match our query so you can see here we have authorization token, so I've already created that in previous steps.
-And there's documentation on how to do that, but you will need to use your API key to create a token to authorize yourself.
-And then in the data we're just using my selector.
-So again, here we see that using that selector we have got our document back and we have the document ID, the name, the city, and the profession, which we showed you earlier.
-So, that was a quick example showing how to use a curl, a cloudant relational database.
-<br>
+- A database is an organized collection of data stored on a computer
+    - Traditionally, this was done via rows and columns as commonly seen in the relational or SQL database
+    - Now, databases have evolved into storing information in ways that do not depend on SQL which are commonly referred to as NoSQL
+    - Databases are used for a variety of use cases, ranging from storing personal or employee information, transaction history or customer data
+    - You'll see them in just about any application you're using
 
+- First, we have a relational database, which is an example of a SQL database
+    - A relational database is a collection of data organized into a table structure, organized into rows and columns
+    - Structured query language, SQL is typically the standard programming language used to update and query the database
+    - Relational databases are also great for asset compliance and high transaction applications such as online transaction processing
+- Next, we have document databases
+    - Databases have flexible schemas
+    - They're best suited to store semi structured data and it can handle dynamic querying
+    - Some common use cases for document stores include customer data, user generated content, and order data
+- Lastly, we have a key value database
+    - Another example of a non-SQL database
+    - A key value database is a non-relational database that stores data as a collection of key value pairs in which a key serves as a unique identifier
+    - Common use cases for these types of databases are leaderboards, caches, and shopping cart data
+
+- Database as a service is a cloud computing service that lets users access and use a cloud database system without purchasing and setting up their own hardware, installing their own database software, or managing the database themselves
+    - Database as a service or DBaaS offers your organization significant financial, operational and strategic benefits
+    - First, we have simpler, less costly management
+    - With database as a service,the cloud provider manages everything
+    - Although you can choose to manage certain aspects yourself if you wish
+    - Scalability, you can quickly and easily provision additional storage and computing capacity at runtime if you need it, and you can scale down your database cluster during non-peak usage times to save cost
+    - And you have rapid development and faster time to market
+    - With DBaaS, developers can help themselves to database capabilities and spin up and configure a database that's ready to integrate with their application in minutes
+
+- IBM Cloud has a few different options in terms of relational databases
+    - Db2, a fully hosted, highly performant relational data store running the enterprise class Db2 database engine
+        - We also have Db2 hosted which lets you run Db2 with full administrative access on cloud infrastructure
+    - Then we have my SQL, one of the most popular databases
+        - It is free an under the GNU General Public License and also Postgres
+    - Postgres is an open source object relational database with over 30 years of history
+
+- Next, let's talk a little bit about document databases on IBM Cloud
+    - First, we have MongoDB, which is the most popular document database and is available as a managed service on IBM Cloud
+    - It features a flexible data model, high availability, automated backup orchestration, auto scaling and coupled allocation of storage RAM, and vCPUs and is HIPAA compliant
+
+- Next, we have clouded, which is IBM's database as a service based on Apache's CouchDB
+    - It has a 99.99% service level agreement
+
+- Next, we have Elasticsearch which is IBM Cloud's enterprise-ready fully managed solution for JSON document indexing and full text search capabilities
+
+- Next, we'll talk about the key value databases on IBM Cloud
+- We have two options for that
+    - First is Redis, which is an open source in memory data structure store, used as a database, cache, and message broker
+    - Next, we have etcd, which is an object relational database management system with an emphasis on extensibility and on standards compliance
+
+- Next, we're going to go into a little bit more detail on using the cloudant database
+    - So, here, we're in our IBM Cloud and we've already provisioned a cloudant database service,and we're here in the manage tab of that service
+    - You can see we have a button to launch the dashboard and we have our external endpoint here
+    - So later in the video will be making a curl request to that external endpoint
+    - The first document has my name and my city
+    - So now we're going to go ahead to our terminal and we're going to show you a sample query
+    - So, here is a JSON, which uses a selector to make a query
+    - So here we're making that curl request
+    - You can see we're using curl and then we have that external endpoint that we showed you earlier
+    - And then in the data we're just using my selector
+<br>
 
 ## Hands-on Lab: Get to Know Cloudant
 - Navigate to [link](https://cloud.ibm.com) to launch the IBM Cloud
@@ -100,130 +85,79 @@ So, that was a quick example showing how to use a curl, a cloudant relational da
 <br>
 
 ## Integration
-In this video, we're going to talk about integration services on IBM Cloud.
-We'll start with a basic understanding of integration and then move on to the several
-different offerings that IBM Cloud has in terms of integration.
-Lastly, we'll end with a demo showing how to use one of these integration services to
-send data between applications.
-Let's get started.
-First, let's define what is integration.
-Integration provides connectivity, routing, and transformation for different services.
-It enables sharing of data, connecting applications, and security.
-IBM Cloud has several services that enable integration, each of which have a free or
-Lite tier plan.
-API connect which provides API creation and management with security rich features and
-centralized governance.
-App connect which allows you to connect your applications, automate tasks with hundreds
-of built-in connectors.
-Event streams, which is a high throughput message bus built with Apache Kafka.
-MQ which provides enterprise grade messaging.
-Let's take a look at each in more detail.
-API connect is a comprehensive end to end API lifecycle solution that enables the automated
-creation of APIs.
-It also has other features to assist in API lifecycle management, such as being able to
-rapidly generate swagger compliant API's from back end data sources,
-graphically assembling the API invocation flow and applying access control policies,
-being able to share, publish and manage description of APIs through a self-service portal,
-and viewing analytics and data about your APIs.
-App connect is used to connect different applications and have event trigger actions between the
-applications.
-For example, in the screenshot below you can see that app connect is being called when
-you sales first contact is created, which triggers a nuro in a Google Sheets file which
-then sends a message to a specific Slack channel and then creates a task in Insightly.
-Using app connect you can automate your workflow, integrate your data and apps with over 75
-connectors, use any of the 50 plus templates to quickly get started an create, and expose
-flows as rest API's to help developers build applications quickly.
-IBM event streams is a high throughput message bus built with Apache Kafka.
-It features a fully managed Apache Kafka Service, which is built with the open source Apache
-Kafka project.
-It's also highly available and resilient.
-It leverages the availability zone support from IBM Kubernetes service to ensure that
-in the unlikely event of an entire zone being unavailable, your applications will continue
-to work uninterrupted.
-It also has an intuitive user experience.
-And it also has an event driven architecture.
-It integrates with services such as the Watson IoT platform and IBM Cloud functions to make
-it easy to leverage event streams as the critical component of your event driven architecture.
-IBM MQ provides proven enterprise grade messaging capabilities such as point to point and publish
-subscribe models to facilitate the flow of information in the form of messages between
-applications.
-Here are some of the features of the MQ service.
-It has a managed messaging service.
-It also enables you to extend your enterprise messaging to the cloud.
-You can connect new cloud-based apps to your core business systems by integrating with
-your existing on Prem MQ Network.
-You can quickly provision messaging capability in the cloud of your choice.
-You can use it both on IBM Cloud AWS.
-And you can manage your way.
-You could either use the MQ Explorer, the MQ console, or script commands.
-Now let's take a look at a demo using the integration services.
-So, here in our event streams we're on, we're about to create a topic and we create this
-topic called test and we have one partition and then we have one day where we keep our
-messages.
-So, this is our stream service and we've created a topic called test.
-Now we're going to go into our app connect, so we're going to go ahead and launch it.
-And within app connect you can see that we can either create an event driven flow, create
-flows for an API, or import a flow.
-We're going to create an event driven flow.
-Next, we can start the flow here, and then we'll click on toolbox and use the scheduler.
-And here with the scheduler, we're going to have a repeating interval, and we'll run that
-interval every minute.
-And now we're going to add a separate part to the app connects, and then here we'll use
-our event streams.
-So, we've just created that topic.
-As you can remember, and now we have to link the account.
-So, the way to link the account is you have to use the service credentials from that service.
-So, we're going to go back to the event streams manage console and will copy the credentials
-and will place them in.
-And then we'll click connect.
-And now we're going to be connected to our event streams and you can see we've got a
-new account and then we can click send message.
-And here we have to find the topic.
-The topic is already created, which is called test and the payload.
-We're able to add in mappings from the flow.
-So, we already have our scheduler, so we'll add in the current event time from the scheduler.
-And we'll leave that partition zero, and we can go ahead and try this so we can try the
-action test to see if it works and you'll see we get a 200, which is good.
-We got a successful request and we can see the payload is just a dummy data which is
-1985 April 12, so that's just the current event time, but that is dummy data since we're
-just testing the flow now.
-We're going to go into storage and we're going to go into our cloudant service.
-We're on our product service and we're going to watch the dashboard and will create a database
-and we're just going to call it IBM Cloud essentials, and we'll keep it as non-partitioned.
-And wie'll it create so will here in our database we can now go ahead and create a document
-and now we're going to grab our API key.
-So, we'll need to actually connect this Cloud Service an in that we can actually automatically
-create a document using app connect.
-So now we're going to hit connect and we'll just need our host name and API key.
-So, here's our API key and we already grabbed that host name earlier.
-We'll click connect.
-So, now we're connected to Cloudant.
-So, now we should find our database which is IBM Cloud essentials.
-And now we're going to leave the document ID empty and then for the document data we
-can actually pass in some of the mappings from the flow.
-So, we can pass in our scheduler and we can pass in the current event time.
-And then we also have our IBM event streams offset available, so that's what we actually
-get from our IBM event stream service.
-So, we can say hello at this current time from this offset from our IBM event streams.
-And let's go ahead and try this out.
-So basically, we're just going to create a new document in cloudant and we'll write this
-message which is hello at at a certain time from this offset.
-And will save this flow in app connect.
-And we can start the flow now.
-So, once we start the flow, we should get real data so we won't get that.
-1985 will get 2020 data here in cloudant and if we refresh, we'll see that we have this
-dummy data from hello at 1985 an now.
-We also have this real data.
-Once we started the flow.
-So, hello August 27, 2020 from offset one and if we wait another minute we will refresh
-again and now we'll see we should get offset two so, Hello on August 27th from offset two.
-So, this was a quick demo showing IBM event streams, and cloudant, and app connect.
-Now let's summarize.
-Integration enables secure communication between services.
-It also allows for sharing of data between applications.
-Messaging events and triggers are key components to understand when talking about integration.
-IBM Cloud has multiple services that enable integration, such as API connect, app connect,
-event streams and MQ.
+- Integration provides connectivity, routing, and transformation for different services
+    - It enables sharing of data, connecting applications, and security
+    - IBM Cloud has several services that enable integration, each of which have a free or Lite tier plan
+    - API connect which provides API creation and management with security rich features and centralized governance
+    - App connect which allows you to connect your applications, automate tasks with hundreds of built-in connectors
+    - Event streams, which is a high throughput message bus built with Apache Kafka
+    - MQ which provides enterprise grade messaging
+
+- Let's take a look at each in more detail
+    - API connect is a comprehensive end to end API lifecycle solution that enables the automated creation of APIs
+    - It also has other features to assist in API lifecycle management, such as being able to rapidly generate swagger compliant API's from back end data sources, graphically assembling the API invocation flow and applying access control policies, being able to share, publish and manage description of APIs through a self-service portal, and viewing analytics and data about your APIs
+    - App connect is used to connect different applications and have event trigger actions between the applications
+        - For example, in the screenshot below you can see that app connect is being called when you sales first contact is created, which triggers a nuro in a Google Sheets file which then sends a message to a specific Slack channel and then creates a task in Insightly
+        - Using app connect you can automate your workflow, integrate your data and apps with over 75 connectors, use any of the 50 plus templates to quickly get started an create, and expose flows as rest API's to help developers build applications quickly
+    - IBM event streams is a high throughput message bus built with Apache Kafka
+    - It features a fully managed Apache Kafka Service, which is built with the open source Apache Kafka project
+        - It's also highly available and resilient
+        - It leverages the availability zone support from IBM Kubernetes service to ensure that in the unlikely event of an entire zone being unavailable, your applications will continue to work uninterrupted
+        - It also has an intuitive user experience
+        - And it also has an event driven architecture
+        - It integrates with services such as the Watson IoT platform and IBM Cloud functions to make it easy to leverage event streams as the critical component of your event driven architecture
+    - IBM MQ provides proven enterprise grade messaging capabilities such as point to point and publish subscribe models to facilitate the flow of information in the form of messages between applications
+        - It has a managed messaging service
+        - It also enables you to extend your enterprise messaging to the cloud
+        - You can connect new cloud-based apps to your core business systems by integrating with your existing on Prem MQ Network.
+        - You can quickly provision messaging capability in the cloud of your choice
+        - You can use it both on IBM Cloud AWS and you can manage your way
+        - You could either use the MQ Explorer, the MQ console, or script commands
+
+- Now let's take a look at a demo using the integration services
+So, here in our event streams we're on, we're about to create a topic and we create this topic called test and we have one partition and then we have one day where we keep our messages
+So, this is our stream service and we've created a topic called test
+Now we're going to go into our app connect, so we're going to go ahead and launch it
+And within app connect you can see that we can either create an event driven flow, create flows for an API, or import a flow
+We're going to create an event driven flow
+Next, we can start the flow here, and then we'll click on toolbox and use the scheduler
+And here with the scheduler, we're going to have a repeating interval, and we'll run that interval every minute.
+And now we're going to add a separate part to the app connects, and then here we'll use our event streams.
+So, we've just created that topic
+As you can remember, and now we have to link the account
+So, the way to link the account is you have to use the service credentials from that service
+So, we're going to go back to the event streams manage console and will copy the credentials and will place them in
+And then we'll click connect
+And now we're going to be connected to our event streams and you can see we've got a new account and then we can click send message.
+And here we have to find the topic
+The topic is already created, which is called test and the payload
+We're able to add in mappings from the flow
+So, we already have our scheduler, so we'll add in the current event time from the scheduler
+And we'll leave that partition zero, and we can go ahead and try this so we can try the action test to see if it works and you'll see we get a 200, which is good
+We got a successful request and we can see the payload is just a dummy data which is 1985 April 12, so that's just the current event time, but that is dummy data since we're just testing the flow now
+We're going to go into storage and we're going to go into our cloudant service
+We're on our product service and we're going to watch the dashboard and will create a database and we're just going to call it IBM Cloud essentials, and we'll keep it as non-partitioned
+And wie'll it create so will here in our database we can now go ahead and create a document and now we're going to grab our API key
+So, we'll need to actually connect this Cloud Service an in that we can actually automatically create a document using app connect
+So now we're going to hit connect and we'll just need our host name and API key
+So, here's our API key and we already grabbed that host name earlier
+We'll click connect
+So, now we're connected to Cloudant
+So, now we should find our database which is IBM Cloud essentials
+And now we're going to leave the document ID empty and then for the document data we can actually pass in some of the mappings from the flow
+So, we can pass in our scheduler and we can pass in the current event time
+And then we also have our IBM event streams offset available, so that's what we actually get from our IBM event stream service
+So, we can say hello at this current time from this offset from our IBM event streams
+And let's go ahead and try this out
+So basically, we're just going to create a new document in cloudant and we'll write this message which is hello at at a certain time from this offset
+And will save this flow in app connect
+And we can start the flow now
+So, once we start the flow, we should get real data so we won't get that
+1985 will get 2020 data here in cloudant and if we refresh, we'll see that we have this dummy data from hello at 1985 an now
+We also have this real data
+Once we started the flow
+So, hello August 27, 2020 from offset one and if we wait another minute we will refresh again and now we'll see we should get offset two so, Hello on August 27th from offset two
+So, this was a quick demo showing IBM event streams, and cloudant, and app connect
 <br>
 
 ## Artificial Intelligence
