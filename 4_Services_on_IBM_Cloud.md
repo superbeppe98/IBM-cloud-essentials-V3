@@ -13,6 +13,9 @@
 <br>
 
 ## Databases
+
+![image](https://user-images.githubusercontent.com/29455975/185745646-dafb19a0-8ade-4096-9f3c-3295fee9d07f.png)
+
 - A database is an organized collection of data stored on a computer
     - Traditionally, this was done via rows and columns as commonly seen in the relational or SQL database
     - Now, databases have evolved into storing information in ways that do not depend on SQL which are commonly referred to as NoSQL
@@ -74,6 +77,9 @@
 <br>
 
 ## Integration
+
+![image](https://user-images.githubusercontent.com/29455975/185745684-5b049e94-ab7c-4b41-ba42-29cdf4ea6918.png)
+
 - Integration provides connectivity, routing, and transformation for different services
     - It enables sharing of data, connecting applications, and security
     - IBM Cloud has several services that enable integration, each of which have a free or Lite tier plan
@@ -105,6 +111,9 @@
 <br>
 
 ## Artificial Intelligence
+
+![image](https://user-images.githubusercontent.com/29455975/185745701-8a960f27-a81e-4f14-94da-0fb7fe509cf1.png)
+
 - Data science is a method for gleaning insights from structured and unstructured data using analytics and machine learning
     - Data is key here
     - Data science excels when there is a massive amount of data to analyze
@@ -177,6 +186,9 @@
 <br>
 
 ## Analytics
+
+![image](https://user-images.githubusercontent.com/29455975/185745722-7da8d31d-5e4b-4547-9c6d-1bf4ce00f927.png)
+
 - Data analytics is the science of analyzing raw data in order to make conclusions about that information
     - Any type of information can be subjected to data analytics techniques to get insight that can be used to improve things
 
@@ -226,6 +238,9 @@
 <br>
 
 ## DevOps
+
+![image](https://user-images.githubusercontent.com/29455975/185745757-b58d39c1-5000-4afc-89ad-5a08a0da1de6.png)
+
 - What is DevOps?
     - DevOps is a set of practices that combine software development dev and it operations ops
     - It aims to shorten the development lifecycle by providing continuous deployment with high software quality via automated tests and delivery governance
@@ -280,6 +295,9 @@
 <br>
 
 ## Blockchain
+
+![image](https://user-images.githubusercontent.com/29455975/185745784-bec60a47-1250-4a56-a8bc-8e371e881910.png)
+
 - What is a blockchain?
     - A blockchain is a growing list of records, called blocks that are linked using cryptography
     - Each block contains a cryptographic hash of the previous block, timestamp, and transaction data
@@ -326,6 +344,9 @@
 <br>
 
 ## Internet of Things
+
+![image](https://user-images.githubusercontent.com/29455975/185745807-c6eb2235-9503-4c0b-a45d-d4396017584b.png)
+
 - What is IoT?
     - IoT or Internet of Things is a system of interrelated computing devices that transfer data over a network without requiring human interaction
 
@@ -358,6 +379,9 @@
 <br>
 
 ## Cloud Paks
+
+![image](https://user-images.githubusercontent.com/29455975/185745818-48ee98ce-5c47-4ef5-8b4c-db66ea31f9fb.png)
+
 - What are IBM Cloud Paks?
     - Cloud Paks are containerized software solutions built to run anywhere?
     - I like to think of it as a bundle of continuous software
