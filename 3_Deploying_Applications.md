@@ -1,4 +1,4 @@
-[Back to Syllabus](/READMEmd#course-syllabus)
+[Back to Syllabus](/README.md#course-syllabus)
 
 ## Learning Objectives
 
@@ -259,6 +259,11 @@ You can set up fine grain assignment of compute capacity to development teams wi
         - Periodic intervals so that they can run every few hours or at a specific time or date, either one time or repeatedly
     - Cloud functions on IBM Cloud support many different runtimes
         - You have the option of choosing from Java, Node, Python, Go, Swift, PHP, Ruby or any other language or framework by leveraging containers
+<br>
+
+## Module Summary
+- We performed an overview of the IBM Cloud platform
+- We covered IBM Cloud at a high level, locations and regions, account types and support plans, billing and usage, the cost estimator tool, and identity and access management
 <br>
 
 [Go to Next Module](./4_Services_on_IBM_Cloud.md)

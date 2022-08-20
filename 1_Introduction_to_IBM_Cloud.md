@@ -1,4 +1,4 @@
-[Back to Syllabus](/READMEmd#course-syllabus)
+[Back to Syllabus](/README.md#course-syllabus)
 
 ## Learning Objectives
 
@@ -43,6 +43,8 @@
   - Tokyo
   - Sydney
 
+![image](https://user-images.githubusercontent.com/29455975/185744863-2a002c02-7910-4e4d-a366-1af7e40ef09f.png)
+
 - In a single zone cluster your resources remain in the zone in which the cluster is deployed
 - In IBM cloud, there is also the concept of a multi-zone region, a multi-zone region has three or more data centers within 6 miles of each other
 - These data centers are located in close proximity to ensure high availability and resiliency
@@ -54,6 +56,9 @@
   - Lite: free of charge
   - Pay-as-You-Go: access all IBM Cloud services
   - Subscription: enterprise customers
+
+![image](https://user-images.githubusercontent.com/29455975/185744916-fa78df42-684c-4960-92d3-197fc58f68a2.png)
+
 
 - Benefits
   - Lite: access to over 40 services like cloud object storage and cloud databases
@@ -89,11 +94,19 @@
   - if we click on the promotions tab in the left-hand side
   - You can click apply here to add promo code
 - If we want to click and create a spending notification, we’ll just go on spending notifications in the left-hand side and we can click on enable here and then add in your email address and then click a threshold
+
+![image](https://user-images.githubusercontent.com/29455975/185744962-29cdd24d-cc6f-4196-9e2c-7a91bf6f16c9.png)
+
+
 <br>
 
 ## Cost Estimator
 - The cost estimator tool does exactly what its name suggests, it estimates the cost of an IBM Cloud service before you create the service
 - The tool is supported by all IBM Cloud services ranging from AI Services to infrastructure, services and Kubernetes clusters
+
+![image](https://user-images.githubusercontent.com/29455975/185744995-4860d283-8f2d-457e-ac8d-5af0aabb5b35.png)
+
+
 - You can download your estimate as a PDF and you can calculate your estimate in over 15 currencies
 - Next, let's go ahead and click on virtual server and then we'll add that to the list of products that we want to estimate
   - So, you can see, here, we're going to click on public, and then we're going to click on hourly billing and the North America South location, and then we'll click on a specific image such as the CentOS
@@ -112,6 +125,10 @@
 <br>
 
 ## IAM
+
+![image](https://user-images.githubusercontent.com/29455975/185745025-e46c08d8-7264-427f-a63a-1d600da3b3fe.png)
+
+
 - In IBM Cloud, IAM is comprised of four concepts:
   - Users: these are the people that log in and use the account
   - Access groups: this is a way of grouping users together
@@ -189,6 +206,15 @@ one of the many other offerings
     - Use the IBM Cloud CLI
 ![image](https://user-images.githubusercontent.com/29455975/185613164-57e09cfb-340a-44e5-8c3b-85497d9c89ed.png)
 
+<br>
+
+## Module Summary
+- IBM Cloud has a catalog of over 200 products and services covering IaaS, PaaS, containers, data and AI, blockchain and more; more than 60 data centers globally; is built on best-in-industry security standards, including GDPR, HIPAA, ISO 9001, PCI, and SOC2
+- In terms of locations and regions, IBM Cloud has data centers in 19 countries and is divided into 6 regions; there is support for both single and multi-zone regions for better resiliency; there are federal regions for government workloads.
+There are three account types on IBM Cloud: Lite, Pay-as-you-go, and Subscription; and there are three support levels on IBM Cloud: Basic, Advanced, and Premium
+- IBM Cloud provides a month-to-month overview of billing and usage; usage and billing can be broken down by service; billing and usage reports can be exported as CSV files
+- IBM Cloud’s Cost Estimator Tool is supported by all IBM Cloud services; is able to convert to multiple currencies, and is able to generate reports as PDF documents
+- An IBM Cloud account can have many users and access groups, which are a collection of users; resources are instances of services from the catalog; roles are assigned on a user or access group and a resource or resource group, coming together to become an access policy
 <br>
 
 [Go to Next Module](./2_Infrastructure.md)

@@ -1,4 +1,4 @@
-[Back to Syllabus](/READMEmd#course-syllabus)
+[Back to Syllabus](/README.md#course-syllabus)
 
 ## Learning Objectives
 
@@ -408,4 +408,11 @@
     - The IBM Cloud Pak for automation provides applications in core areas where automation provides benefits, content, workflow, decisions, and capture cloud fact for automation
     - Provides low code consumable tools, API's and application connectors that make it easy to consume content in business applications
     - You can also automate your end to end workflow with IBM business automation workflow and you can use IBM operational decision manager to automate the implementation of business policies in your organization
+<br>
+
+## Module Summary
+- We performed an overview of IBM Cloud services that are fundamental to creating modern applications
+- We covered services for databases, integration, artificial intelligence, analytics, DevOps, blockchain, and the internet of things.
+
+![image](https://user-images.githubusercontent.com/29455975/185744233-dbd681f4-7f86-448a-8b40-de804a4127a3.png)
 <br>

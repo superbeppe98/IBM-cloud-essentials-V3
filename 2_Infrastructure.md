@@ -1,4 +1,4 @@
-[Back to Syllabus](/READMEmd#course-syllabus)
+[Back to Syllabus](/README.md#course-syllabus)
 
 ## Learning Objectives
 
@@ -294,6 +294,11 @@
     - First, we're going to talk about Veeam; it allows you to backup and replicate virtual machines on VM Ware easily
     - Next is Zerto, which assists with creating and managing disaster recovery with VMware
     - And lastly, we have the F5 Big IP Suite of products: these help in networking and security related tools for your VMware solution; it covers things like load balancing, firewalls, DNS and more
+<br>
+
+## Module Summary
+- We performed an overview of the various Infrastructure services available on IBM Cloud
+- We covered virtual servers, file and block storage, object storage, networking, virtual private clouds, and VMware solutions
 <br>
 
 [Go to Next Module](./3_Deploying_Applications.md)
