@@ -75,10 +75,6 @@
   - In the account settings tab is where you can see your account type and then your ID
   - Click on support from the upper tab
   - In the support center, you can see your support plan
-- Next, let's go ahead and create a case
-  - Here, you can click on the services that you have provisioned and then click on the one service that you want to create a case for
-  - Next, in the created case, you can give a subject line and then a description and then provide any screenshots to help you provide more details about the case
-  - Lastly, you want to hit continue and that's how you create a case
 <br>
 
 ## Billing and Usage
@@ -104,11 +100,6 @@
 ![image](https://user-images.githubusercontent.com/29455975/185744995-4860d283-8f2d-457e-ac8d-5af0aabb5b35.png)
 
 - You can download your estimate as a PDF and you can calculate your estimate in over 15 currencies
-- Next, let's go ahead and click on virtual server and then we'll add that to the list of products that we want to estimate
-  - So, you can see, here, we're going to click on public, and then we're going to click on hourly billing and the North America South location, and then we'll click on a specific image such as the CentOS
-  - We can add that to our estimate, note that then we'll be keeping track of multiple products to our cost
-  - Next, we'll click a monthly usage as well, so we'll say that we want to rent this instance for a full month
-  - And we're ready to download, so now we can export our cost estimate and send it to anybody across the team
 <br>
 
 ## Hands-on Lab: Use the Cost Estimator Tool
@@ -159,28 +150,11 @@ one of the many other offerings
   - A resource’s resource group cannot be changed
   - Resource groups have no geographical restrictions: this means you can put resources from Dallas and resources from Sydney in the same group,bringing it all together is the concept of an access policy
   - An access policy is the combination of a subject, which is a user or an access group, their role and a target, a resource or resource group
-
-- Today, I want to show you a little bit of how to create an API key and how to authenticate yourself in a terminal or command line interface with your API key and then also I want to show you how to create and invite users to your account, and then give them certain permissions over services and other resource groups
-  - From the manage tab in the top tab of IBM Cloud, you can click on access or IAM, we're going to go into the left sidebar, and we'll click on API keys
-  - I'm just going to create a new one and I'll call it test and, great, we can see that the API key has been successfully created We can copy it and download it, which is always a good idea
-  - Now that we're in my terminal, we can authenticate into IBM Cloud
-  - So, we can do IBM Cloud login, dash dash API key, and then I'll just do paste, and I'll paste in my API key and in a couple of seconds you should see that you're authenticated and you can check all the resource groups
-  - Great, so again you can see that we've authenticated, and we've seen all my instances in my account
-
-- Alright, so now we've seen a little bit about API keys and now let's go ahead and talk a little bit about users and access groups
-  - So, let's go ahead and click on users from the left-hand side bar, here we have all the account users that we have on this particular account, and I will be able to go ahead and click on invite users
-  - So, here, we can already see that we can add users to access groups, these are things that have already been set up so we can actually create access groups to group all of these new users that come into this account into specific buckets
-  - So, one of the buckets that we can group them into is the admin bucket, you can see that they have this number 129 is the actual actions for this role
-  - So, they have a lot of user management actions so they can add other users
-  - They can do a lot of the administrative features within this account 
-  - Then there's also billing, so billing is able is actually working with finance to pay the bills
-
 - So, let's talk a little bit about assigning users
   - Depending on your level of access, you can assign that same level of access or less to a new user
   - So, let's go ahead and click on the classic infrastructure and go to the devices
   - So, this is where you can see all the different specifications and permissions and actions for a specific device
   -With the Super user, of course, you could upgrade the server and view the software passwords, etc
-
 - Now let's go ahead and talk about the IAM services
   - We can click all IAM services or we can go ahead and click on a specific service
   - So, we have cloud object storage, and we'll go cloudant in our account and we can give them access to only one region again so we can do Dallas or Frankfurt
