@@ -1,4 +1,4 @@
-# IBM-cloud-essentials-V3
+# IBM cloud essentials V3
 
 ## Course Syllabus
 - Module 1: [Introduction to IBM Cloud](./1_Introduction_to_IBM_Cloud.md)
